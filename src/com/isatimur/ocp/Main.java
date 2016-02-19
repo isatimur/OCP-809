@@ -1,4 +1,4 @@
-package com.isatimur;
+package com.isatimur.ocp;
 
 public class Main {
 

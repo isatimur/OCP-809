@@ -1,7 +1,7 @@
-package com.isatimur.package_2;
+package com.isatimur.ocp.package_2;
 
 /**
- * Created by Тимакс on 17.02.2016.
+ * Created by tisachenko on 17.02.2016.
  */
 enum IceCream {
 
