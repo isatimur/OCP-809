@@ -25,9 +25,9 @@ public enum Season {
         }
     };
 
-    public abstract void printHours();
-
     public static void main(String[] args) {
         Season.WINTER.printHours();
     }
+
+    public abstract void printHours();
 }

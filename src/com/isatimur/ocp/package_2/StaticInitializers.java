@@ -4,11 +4,11 @@ package com.isatimur.ocp.package_2;
  * Created by tisachenko on 14.02.16.
  */
 public class StaticInitializers {
+    static int rate = 0;
+
     static {
         rate = 10;
     }
-
-    static int rate = 0;
 
     static {
         ++rate;

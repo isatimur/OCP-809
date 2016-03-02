@@ -9,11 +9,11 @@ class Node {
 }
 
 class Tree {
+    Node rootNode;
+
     Tree() {
 
     }
-
-    Node rootNode;
 
     void addElement(Object value) {
 

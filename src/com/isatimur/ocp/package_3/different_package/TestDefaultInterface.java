@@ -2,6 +2,9 @@ package com.isatimur.ocp.package_3.different_package;
 
 import com.isatimur.ocp.package_3.ReviewInterfaces;
 
+import java.util.List;
+import java.util.stream.Stream;
+
 /**
  * Created by tisachenko on 29.02.16.
  */
@@ -37,6 +40,8 @@ public class TestDefaultInterface {
         System.out.println(interface2);
         System.out.println(interface4);
         System.out.println(myInterface1);
+        Stream stream = Stream.empty();
+        List list;
 
     }
 }

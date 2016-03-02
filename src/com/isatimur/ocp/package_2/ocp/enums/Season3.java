@@ -13,15 +13,17 @@ public enum Season3 {
         public void printHours() {
             System.out.println("long hours");
         }
-    },SPRING,FALL;
-    public void printHours(){
-        System.out.println("default hours");
-    }
+    }, SPRING, FALL;
 
     public static void main(String[] args) {
         Season3.WINTER.printHours();
     }
+
+    public void printHours() {
+        System.out.println("default hours");
+    }
 }
-enum SimpleShape{
-    SQUARE,CIRCLE,TRIANGLE
+
+enum SimpleShape {
+    SQUARE, CIRCLE, TRIANGLE
 }

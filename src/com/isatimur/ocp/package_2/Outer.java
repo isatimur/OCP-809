@@ -7,11 +7,6 @@ public class Outer {
     static int outerStatic = 10;
     int outerInstance = 10;
 
-    static class StaticNested {
-        static int innerStatic = outerStatic;
-        int innerInstance = outerStatic;
-    }
-
     void foo() {
         class LocalInner {
         }
@@ -24,6 +19,11 @@ public class Outer {
                 return "anonymus";
             }
         };
+    }
+
+    static class StaticNested {
+        static int innerStatic = outerStatic;
+        int innerInstance = outerStatic;
     }
 
 

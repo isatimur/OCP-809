@@ -16,17 +16,6 @@ public class MyNumber {
 
     }
 
-    public int hashCode() {
-        return secondary;
-    }
-
-    public boolean equals(Object o) {
-        if (o != null && o instanceof MyNumber)
-            return (primary == ((MyNumber) o).primary);
-        else
-            return false;
-    }
-
     public static void main(String args[]) {
         System.out.println("//if hashCode is defining differently than equals works. \nLike in example below key attributes in overriding methods equals are different \nthan those used in hashCode method;");
         Map<MyNumber, String> map = new HashMap<>();
@@ -42,7 +31,19 @@ public class MyNumber {
         map2.put(anum1, "Shreya");
         System.out.println(map.get(anum1));
     }
+
+    public int hashCode() {
+        return secondary;
+    }
+
+    public boolean equals(Object o) {
+        if (o != null && o instanceof MyNumber)
+            return (primary == ((MyNumber) o).primary);
+        else
+            return false;
+    }
 }
+
 class AnotherNumber {
     int primary;
 
@@ -50,8 +51,12 @@ class AnotherNumber {
         this.primary = primary;
     }
 
+    public static void main(String args[]) {
+
+    }
+
     public int hashCode() {
-        return (int)(Math.random()*100);
+        return (int) (Math.random() * 100);
     }
 
     public boolean equals(Object o) {
@@ -59,9 +64,5 @@ class AnotherNumber {
             return (primary == ((AnotherNumber) o).primary);
         else
             return false;
-    }
-
-    public static void main(String args[]) {
-
     }
 }

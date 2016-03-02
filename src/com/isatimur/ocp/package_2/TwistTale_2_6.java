@@ -5,7 +5,8 @@ package com.isatimur.ocp.package_2;
  */
 public class TwistTale_2_6 {
     {
-        class Test{}
+        class Test {
+        }
         Test test = new Test();
 
     }
@@ -16,17 +17,6 @@ class Flower {
     String color = "red";
     Petal[] petals;
 
-    private class Petal {
-        public Petal() {
-            System.out.println(color);
-        }
-
-        String color = "purple";
-        // line 1
-        static final int count = 3;
-// line 2
-    }
-
     Flower() {
         petals = new Petal[2];
 // line 3
@@ -34,5 +24,16 @@ class Flower {
 
     public static void main(String args[]) {
         new Flower();
+    }
+
+    private class Petal {
+        // line 1
+        static final int count = 3;
+        String color = "purple";
+
+        public Petal() {
+            System.out.println(color);
+        }
+// line 2
     }
 }

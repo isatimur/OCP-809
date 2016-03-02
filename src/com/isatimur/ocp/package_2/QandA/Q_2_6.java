@@ -11,8 +11,6 @@ public class Q_2_6 {
 
 
 class MyClass {
-    enum Size {SMALL, MEDIUM, LARGE}
-
     void aVoid() {
         //enum must not be local
 //        enum Test1{
@@ -20,14 +18,16 @@ class MyClass {
 //        }
     }
 
+    enum Size {SMALL, MEDIUM, LARGE}
+
+    static class StaticNested {
+        enum Size {SMALL, MEDIUM, LARGE}
+    }
+
     class Inner {
 //        Inner class cannot have static declaration!!!!
 //        enum Test2{
 //            TEST_1,TEST_2
 //        }
-    }
-
-    static class StaticNested {
-        enum Size {SMALL, MEDIUM, LARGE}
     }
 }

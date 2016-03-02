@@ -5,7 +5,8 @@ package com.isatimur.ocp.package_2.ocp.enums;
  */
 public enum OnlyOne {
     ONCE(true);
-    private OnlyOne(boolean b){
+
+    private OnlyOne(boolean b) {
         System.out.println("constructing");
     }
 

@@ -11,7 +11,8 @@ public interface ReviewInterfaces {
     public interface interface4 {
     }
 
-    static interface MyInterface1{}
+    static interface MyInterface1 {
+    }
 }
 
 class ReviewInterfaces2 {

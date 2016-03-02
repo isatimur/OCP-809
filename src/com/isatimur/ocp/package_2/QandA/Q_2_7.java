@@ -1,5 +1,10 @@
 package com.isatimur.ocp.package_2.QandA;
 
+interface Floatable {
+    //public and not default access modifier
+    void floating();
+}
+
 /**
  * Created by tisachenko on 19.02.16.
  */
@@ -14,9 +19,4 @@ public class Q_2_7 {
         };
         floatable.floating();
     }
-}
-
-interface Floatable {
-    //public and not default access modifier
-    void floating();
 }

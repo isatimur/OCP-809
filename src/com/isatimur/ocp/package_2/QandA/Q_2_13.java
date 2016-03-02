@@ -5,13 +5,16 @@ package com.isatimur.ocp.package_2.QandA;
  */
 enum Q_2_13 {
     RED;
+
     static {
         System.out.println("Static init");
     }
+
     {
         System.out.println("Init block");
     }
-    Q_2_13(){
+
+    Q_2_13() {
         System.out.println("Constructor");
     }
 
