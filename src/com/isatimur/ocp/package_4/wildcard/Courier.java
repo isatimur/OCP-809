@@ -20,15 +20,36 @@ public class Courier {
         stringList.add("Shreya");
         wrapList(stringList);
 
+
+
+
+        List<? super Gift> list1 = new ArrayList<Gift>();
+        List<? super Gift> list2 = new ArrayList<Object>();
+//        List<? super Gift> list3 = new ArrayList<MyPhone>();
+        List<? super MyPhone> list3 = new ArrayList<Gift>();
+
+
+        List<? super Gift> giftList = new ArrayList<Gift>();
+        giftList.add(new Gift());
+        giftList.add(new MyBook("1"));
+        giftList.add(new MyPhone());
+//        giftList.add(new Object());
+        for (Object obj: giftList) {
+            System.out.println(obj);
+        }
+
+
     }
 
-    public static <T> void wrapList(List<T> list){
-        for (T o: list){
+    public static void wrapList(List<?> list){
+        for (Object o: list){
             System.out.println("GiftWrap: "+o);
         }
     }
 }
 class Gift{}
+class MyPhone extends Gift {
+}
 class MyBook extends Gift{
     String title;
 
