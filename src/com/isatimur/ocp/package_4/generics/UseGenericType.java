@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4;
+package com.isatimur.ocp.package_4.generics;
 
 import java.util.UUID;
 
@@ -25,16 +25,16 @@ class Parcel<T> {
 //        this.t = t;
 //    }
 
-    public <X> void deliver(X x){
+    public <X> void deliver(X x) {
         System.out.println(x.getClass());
-    }
-
-    public void setT(T t) {
-        this.t = t;
     }
 
     public T getT() {
         return t;
+    }
+
+    public void setT(T t) {
+        this.t = t;
     }
 }
 

@@ -12,22 +12,22 @@ public final class ImmutableCircle {
         this.radius = radius;
     }
 
+    public static void main(String[] args) {
+        ImmutableCircle circle = new ImmutableCircle(0, 0, 1);
+        System.out.println(circle);
+    }
+
     public int getRadius() {
         return radius;
     }
 
     public Point getCenter() {
-        return new Point(center.getXPos(),center.getYPos());
+        return new Point(center.getXPos(), center.getYPos());
     }
 
     @Override
     public String toString() {
         return "ImmutableCircle[center at :" + center + " and radius is " + radius + "]";
-    }
-
-    public static void main(String[] args) {
-        ImmutableCircle circle = new ImmutableCircle(0,0,1);
-        System.out.println(circle);
     }
 }
 

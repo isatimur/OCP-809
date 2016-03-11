@@ -1,4 +1,11 @@
-package com.isatimur.ocp.package_4;
+package com.isatimur.ocp.package_4.generics;
+
+interface MyMap<K, V> {
+    void put(K key, V value);
+
+    V get(K key);
+
+}
 
 /**
  * Created by tisachenko on 09.03.16.
@@ -7,25 +14,18 @@ public class GenericInterfaces {
 
     public static void main(String[] args) {
         MyMap map = new MapLegendNonGeneric();
-        map.put("String",1);
+        map.put("String", 1);
         System.out.println(map.get("String"));
 
-        MyMap<String,Double> map2 = new MapLegendNonGeneric2<>();
-        map2.put("String",1d);
+        MyMap<String, Double> map2 = new MapLegendNonGeneric2<>();
+        map2.put("String", 1d);
         System.out.println(map2.get("String"));
 
-        MyMap<String,String> map3 = new MapLegendNonGeneric3<>();
-        map3.put("String","as");
+        MyMap<String, String> map3 = new MapLegendNonGeneric3<>();
+        map3.put("String", "as");
         System.out.println(map3.get("String"));
 
     }
-}
-
-interface MyMap<K, V> {
-    void put(K key, V value);
-
-    V get(K key);
-
 }
 
 class MapLegendNonGeneric implements MyMap<String, Integer> {
@@ -43,7 +43,7 @@ class MapLegendNonGeneric implements MyMap<String, Integer> {
 
 }
 
-class MapLegendNonGeneric2<V> implements MyMap<String,V> {
+class MapLegendNonGeneric2<V> implements MyMap<String, V> {
 
     @Override
     public void put(String key, V value) {
@@ -56,7 +56,7 @@ class MapLegendNonGeneric2<V> implements MyMap<String,V> {
     }
 }
 
-class MapLegendNonGeneric3<K,V> implements MyMap<K,V> {
+class MapLegendNonGeneric3<K, V> implements MyMap<K, V> {
 
 
     @Override

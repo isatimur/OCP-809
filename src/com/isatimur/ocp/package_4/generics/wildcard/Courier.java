@@ -1,9 +1,7 @@
-package com.isatimur.ocp.package_4.wildcard;
+package com.isatimur.ocp.package_4.generics.wildcard;
 
-import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Created by Тимакс on 09.03.2016.
@@ -21,8 +19,6 @@ public class Courier {
         wrapList(stringList);
 
 
-
-
         List<? super Gift> list1 = new ArrayList<Gift>();
         List<? super Gift> list2 = new ArrayList<Object>();
 //        List<? super Gift> list3 = new ArrayList<MyPhone>();
@@ -34,23 +30,27 @@ public class Courier {
         giftList.add(new MyBook("1"));
         giftList.add(new MyPhone());
 //        giftList.add(new Object());
-        for (Object obj: giftList) {
+        for (Object obj : giftList) {
             System.out.println(obj);
         }
 
 
     }
 
-    public static void wrapList(List<?> list){
-        for (Object o: list){
-            System.out.println("GiftWrap: "+o);
+    public static void wrapList(List<?> list) {
+        for (Object o : list) {
+            System.out.println("GiftWrap: " + o);
         }
     }
 }
-class Gift{}
+
+class Gift {
+}
+
 class MyPhone extends Gift {
 }
-class MyBook extends Gift{
+
+class MyBook extends Gift {
     String title;
 
     public MyBook(String title) {

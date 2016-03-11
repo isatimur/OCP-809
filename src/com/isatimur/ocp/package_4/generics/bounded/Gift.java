@@ -1,19 +1,25 @@
-package com.isatimur.ocp.package_4.bounded;
+package com.isatimur.ocp.package_4.generics.bounded;
+
+interface Wrappable {
+}
+
+interface Exchangeble {
+}
 
 /**
  * Created by tisachenko on 09.03.16.
  */
 public abstract class Gift {
-    abstract double getWeight();
-
     public static void main(String[] args) {
-        Parcel<Gift,Wrappable,Exchangeble> parcel = new Parcel<>();
+        Parcel<Gift, Wrappable, Exchangeble> parcel = new Parcel<>();
         parcel.set(new Book());
         parcel.shipParcel();
         parcel.set(new Phone());
         parcel.shipParcel();
 
     }
+
+    abstract double getWeight();
 
     @Override
     public String toString() {
@@ -46,7 +52,7 @@ class Phone extends Gift {
     }
 }
 
-class Parcel<T extends Gift,Wrappable,Exchangeble> {
+class Parcel<T extends Gift, Wrappable, Exchangeble> {
     private T t;
 
     public void set(T t) {
@@ -64,12 +70,6 @@ class Parcel<T extends Gift,Wrappable,Exchangeble> {
             System.out.println("Wrappable or Exchangeble");
         }
     }
-}
-
-interface Wrappable {
-}
-
-interface Exchangeble {
 }
 
 class AThing implements Wrappable {
