@@ -33,11 +33,11 @@ public class TestArrayDeque {
         //B2,C3,E5,F6
 
         Iterator<String> descendingIterator = arrayDeque.descendingIterator();
-        while(descendingIterator.hasNext()){
+        while (descendingIterator.hasNext()) {
             System.out.println(descendingIterator.next());
         }
         Iterator<String> iterator = arrayDeque.iterator();
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
     }

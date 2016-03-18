@@ -12,12 +12,11 @@ public class Twist4_3_RemoveArrayListsElements {
         Integer age2 = 20;
         list.add(age1);
         list.add(age2);
-        System.out.println("size:"+list.size());
+        System.out.println("size:" + list.size());
         age1 = 30;
         list.remove(age1);
 //        list.remove(20);
         System.out.println(list.size());
-
 
 
     }

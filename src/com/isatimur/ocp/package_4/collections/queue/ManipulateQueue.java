@@ -7,7 +7,7 @@ import java.util.Iterator;
 /**
  * Created by tisachenko on 11.03.16.
  */
-public class ManipulateQueue implements Deque{
+public class ManipulateQueue implements Deque {
     public static void main(String[] args) {
 
     }

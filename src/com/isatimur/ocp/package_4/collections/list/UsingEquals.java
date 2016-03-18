@@ -8,13 +8,13 @@ import java.util.ArrayList;
 public class UsingEquals {
     public static void main(String[] args) {
         ArrayList<Emp> list = new ArrayList<>();
-        list.add(new Emp(121,"Max"));
-        list.add(new Emp(55,"Tolik"));
-        list.add(new Emp(15,"Toha"));
-        list.add(new Emp(121,"Max"));
+        list.add(new Emp(121, "Max"));
+        list.add(new Emp(55, "Tolik"));
+        list.add(new Emp(15, "Toha"));
+        list.add(new Emp(121, "Max"));
         System.out.println(list.size());
 
-        Emp emp = new Emp(121,"Max");
+        Emp emp = new Emp(121, "Max");
         list.remove(emp);
 
         System.out.println(list.size());
@@ -36,9 +36,9 @@ class Emp {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || o instanceof Emp){
+        if (o == null || o instanceof Emp) {
             Emp emp = (Emp) o;
-            if(emp.id == this.id && emp.name.equals(this.name)){
+            if (emp.id == this.id && emp.name.equals(this.name)) {
                 return true;
             }
         }
