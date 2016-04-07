@@ -15,11 +15,11 @@ public class NonBufferedAndBufferedBytesReadAndWrite {
         ) {
             long start = System.currentTimeMillis();
             int data;
-            while((data=in.read())!=-1){
+            while ((data = in.read()) != -1) {
                 out.write(data);
             }
-                long end = System.currentTimeMillis();
-            System.out.println("Millis elapsed: "+ (end-start));
+            long end = System.currentTimeMillis();
+            System.out.println("Millis elapsed: " + (end - start));
         }
     }
 }

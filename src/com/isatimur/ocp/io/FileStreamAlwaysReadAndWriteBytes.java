@@ -14,7 +14,7 @@ public class FileStreamAlwaysReadAndWriteBytes {
         ) {
             //so writes only 1 byte from int last 8 lower bits
             int i999 = 0b00000000_00000000_00000011_11100111;
-            int i20 = 0b00000000_00000000_00000000_11111111;
+            int i20 = 0b00000000_00000000_00000000_11101111;
 
             out.write(i999);
             out.write(i20);
