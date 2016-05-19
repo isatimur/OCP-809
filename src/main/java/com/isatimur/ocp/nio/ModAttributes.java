@@ -15,7 +15,7 @@ public class ModAttributes {
     public static void main(String[] args) throws IOException {
         Path file = Paths.get("/home/tisachenko/projects/OCP-809/ReadChars.java");
         BasicFileAttributeView view = Files.getFileAttributeView(file, BasicFileAttributeView.class);
-
+//        Files.readAttributes(file)
         long now = System.currentTimeMillis();
         FileTime creationTime = FileTime.fromMillis(now - 60000);
 
