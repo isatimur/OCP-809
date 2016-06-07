@@ -45,10 +45,11 @@ class AndroidApp extends Thread {
 
     @Override
     public void run() {
-        CDeveloper devLock= dev;
-        CTester testerLock= tester;
-        synchronized (devLock) {
-            synchronized (testerLock) {
+//        CDeveloper devLock= dev;
+//        CTester testerLock= tester;
+        synchronized (dev) {
+
+            synchronized (tester) {
                 tester.testAppln();
                 dev.fixBugs();
             }
@@ -67,10 +68,10 @@ class iPhoneApp extends Thread {
 
     @Override
     public void run() {
-        CTester testerLock= tester;
-        CDeveloper devLock= dev;
-        synchronized (testerLock) {
-            synchronized (devLock) {
+//        CTester testerLock= tester;
+//        CDeveloper devLock= dev;
+        synchronized (tester) {
+            synchronized (dev) {
                 tester.testAppln();
                 dev.fixBugs();
             }
