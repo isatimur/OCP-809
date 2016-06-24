@@ -26,6 +26,16 @@ public class CopyFlashCard implements ActionListener {
     JButton clear = null;
     JButton exit = null;
 
+    public static void main(String[] args) throws IOException {
+//        CopyFlashCard flashCard = new CopyFlashCard();
+//        flashCard.buildUI();
+        try (InputStream in = System.in) {
+            Path target = Paths.get("myNotesFromConsole.txt");
+            Files.copy(in, target, StandardCopyOption.REPLACE_EXISTING);
+        }
+
+    }
+
     private void buildUI() {
         copyFrom = new JTextField();
         copyTo = new JTextField();
@@ -71,17 +81,6 @@ public class CopyFlashCard implements ActionListener {
 
         copyFrom.setText("/home/tisachenko/ROSTRUD/8/8-1.txt");
         copyTo.setText("/home/tisachenko/ROSTRUD/8/8-1.txt");
-
-    }
-
-
-    public static void main(String[] args) throws IOException{
-//        CopyFlashCard flashCard = new CopyFlashCard();
-//        flashCard.buildUI();
-        try(InputStream in = System.in){
-            Path target = Paths.get("myNotesFromConsole.txt");
-            Files.copy(in,target,StandardCopyOption.REPLACE_EXISTING);
-        }
 
     }
 

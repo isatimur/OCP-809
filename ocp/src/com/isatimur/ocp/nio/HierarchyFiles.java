@@ -38,6 +38,10 @@ public class HierarchyFiles {
         return new LocalFileVisitor();
     }
 
+    public static LinkedHashMap<String, LinkedList<String>> getFlashCardsMap() {
+        return flashCardsMap;
+    }
+
     private static class LocalFileVisitor implements FileVisitor<Path> {
 
         @Override
@@ -83,10 +87,6 @@ public class HierarchyFiles {
         public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
             return FileVisitResult.CONTINUE;
         }
-    }
-
-    public static LinkedHashMap<String, LinkedList<String>> getFlashCardsMap() {
-        return flashCardsMap;
     }
 }
 

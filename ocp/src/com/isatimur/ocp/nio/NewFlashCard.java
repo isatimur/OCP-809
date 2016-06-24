@@ -23,6 +23,11 @@ public class NewFlashCard implements ActionListener {
     JButton clear = null;
     JButton exit = null;
 
+    public static void main(String[] args) {
+        NewFlashCard flashCard = new NewFlashCard();
+        flashCard.buildUI();
+    }
+
     private void buildUI() {
         mainObj = new JTextField();
         subObj = new JTextField();
@@ -63,12 +68,6 @@ public class NewFlashCard implements ActionListener {
         frame.setSize(500, 250);
         frame.getContentPane().add(main);
         frame.setVisible(true);
-    }
-
-
-    public static void main(String[] args) {
-        NewFlashCard flashCard = new NewFlashCard();
-        flashCard.buildUI();
     }
 
     public void actionPerformed(ActionEvent e) {

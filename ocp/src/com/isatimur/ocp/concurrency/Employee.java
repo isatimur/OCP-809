@@ -15,6 +15,19 @@ public class Employee extends Thread {
         this.name = name;
     }
 
+    public static void main(String[] args) {
+        Bus bus = new Bus();
+        Employee employee = new Employee(bus, "Paulinio");
+        employee.start();
+        employee.interrupt();
+
+        Employee employeeM = new Employee(bus, "Maurizio");
+        employeeM.start();
+//        employeeM.interrupt();
+
+
+    }
+
     @Override
     public void run() {
         try {
@@ -28,20 +41,6 @@ public class Employee extends Thread {
             System.out.println(name + " : Interrupted!");
             Thread.currentThread().interrupt();
         }
-    }
-
-    public static void main(String[] args) {
-        Bus bus = new Bus();
-        Employee employee = new Employee(bus,"Paulinio");
-        employee.start();
-        employee.interrupt();
-
-        Employee employeeM = new Employee(bus,"Maurizio");
-        employeeM.start();
-//        employeeM.interrupt();
-
-
-
     }
 }
 

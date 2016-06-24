@@ -9,16 +9,6 @@ import java.util.List;
  */
 public class TExecutor {
 
-    public <T> T execQuery(Connection connection, String query, TResultHandler<T> handler) throws SQLException {
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(query);
-        T value = handler.handle(resultSet);
-        resultSet.close();
-        statement.close();
-        return value;
-
-    }
-
     public static void main(String[] args) throws SQLException {
         TExecutor executor = new TExecutor();
         try (Connection connection = getConnection()) {
@@ -39,12 +29,21 @@ public class TExecutor {
         }
     }
 
-
     public static Connection getConnection() throws SQLException {
         String username = "postgres";
         String password = "admin";
         String url = "jdbc:postgresql://localhost:5432/blog-db";
         return DriverManager.getConnection(url, username, password);
+    }
+
+    public <T> T execQuery(Connection connection, String query, TResultHandler<T> handler) throws SQLException {
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(query);
+        T value = handler.handle(resultSet);
+        resultSet.close();
+        statement.close();
+        return value;
+
     }
 }
 

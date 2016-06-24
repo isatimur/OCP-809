@@ -21,6 +21,19 @@ public class DisplayFlashCards implements ActionListener {
     JLabel lblFlashcard = null;
     JButton btnNext = null;
     JButton btnPrevious = null;
+    FileVisitor fileVisitor = HierarchyFiles.getLocalFileVisitor();
+    LinkedHashMap<String, LinkedList<String>> flashcards = null;
+    ListIterator<String> examObjIterator = null;
+    LinkedList<String> keyNames = new LinkedList<>();
+    ListIterator<String> tipsIterator = null;
+
+    public static void main(String[] args) throws IOException {
+        DisplayFlashCards displayFlashCards = new DisplayFlashCards();
+        displayFlashCards.buildUI();
+        displayFlashCards.accessAllExamTips();
+        displayFlashCards.initExamTips();
+
+    }
 
     private void buildUI() {
         lblObjectiveNo = new JLabel();
@@ -68,13 +81,6 @@ public class DisplayFlashCards implements ActionListener {
         flashcards = HierarchyFiles.flashCardsMap;
     }
 
-    FileVisitor fileVisitor = HierarchyFiles.getLocalFileVisitor();
-
-    LinkedHashMap<String, LinkedList<String>> flashcards = null;
-    ListIterator<String> examObjIterator = null;
-    LinkedList<String> keyNames = new LinkedList<>();
-    ListIterator<String> tipsIterator = null;
-
     public void initExamTips() {
         for (String key : flashcards.keySet()) {
             keyNames.add(key);
@@ -99,7 +105,6 @@ public class DisplayFlashCards implements ActionListener {
 
 
     }
-
 
     private void showPrevTip() {
         if (tipsIterator != null && tipsIterator.hasPrevious()) {
@@ -129,13 +134,5 @@ public class DisplayFlashCards implements ActionListener {
         } catch (Exception e1) {
             JOptionPane.showMessageDialog(frame, e1.toString());
         }
-    }
-
-    public static void main(String[] args) throws IOException {
-        DisplayFlashCards displayFlashCards = new DisplayFlashCards();
-        displayFlashCards.buildUI();
-        displayFlashCards.accessAllExamTips();
-        displayFlashCards.initExamTips();
-
     }
 }

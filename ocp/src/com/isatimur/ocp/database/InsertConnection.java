@@ -1,6 +1,9 @@
 package com.isatimur.ocp.database;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Created by tisachenko on 02.05.16.

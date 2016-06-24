@@ -17,6 +17,20 @@ public class Shipment extends Thread {
         this.qty = qty;
     }
 
+    public static void main(String[] args) {
+        Inventory loc1 = new Inventory("Seattle");
+        loc1.inStock = 100;
+        Inventory loc2 = new Inventory("LA");
+        loc2.inStock = 200;
+
+        Shipment s1 = new Shipment(loc1, loc2, 1);
+        Shipment s2 = new Shipment(loc2, loc1, 10);
+
+        s1.start();
+        s2.start();
+
+    }
+
     @Override
     public void run() {
         if (loc1.lock.tryLock()) {
@@ -34,20 +48,6 @@ public class Shipment extends Thread {
         } else {
             System.out.println("Locking 1 false: " + loc1.name);
         }
-    }
-
-    public static void main(String[] args) {
-        Inventory loc1 = new Inventory("Seattle");
-        loc1.inStock = 100;
-        Inventory loc2 = new Inventory("LA");
-        loc2.inStock = 200;
-
-        Shipment s1 = new Shipment(loc1,loc2,1);
-        Shipment s2 = new Shipment(loc2,loc1,10);
-
-        s1.start();
-        s2.start();
-
     }
 }
 

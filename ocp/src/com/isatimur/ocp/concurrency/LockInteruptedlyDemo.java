@@ -11,6 +11,18 @@ public class LockInteruptedlyDemo implements Task {
 
     final ReentrantLock reentrantLock = new ReentrantLock();
 
+    public static void main(String[] args) {
+        final int threadCount = 5;
+        final ExecutorService service = Executors.newFixedThreadPool(threadCount);
+        final Task task = new LockInteruptedlyDemo();
+
+        for (int i = 0; i < threadCount; i++) {
+            service.execute(new Worker(task));
+        }
+
+        service.shutdown();
+    }
+
     @Override
     public void performTask() {
         try {
@@ -31,18 +43,6 @@ public class LockInteruptedlyDemo implements Task {
             System.out.println(Thread.currentThread().getName() + " : Interrupted!");
             Thread.currentThread().interrupt();
         }
-    }
-
-    public static void main(String[] args) {
-        final int threadCount = 5;
-        final ExecutorService service = Executors.newFixedThreadPool(threadCount);
-        final Task task = new LockInteruptedlyDemo();
-
-        for (int i = 0; i < threadCount; i++) {
-            service.execute(new Worker(task));
-        }
-
-        service.shutdown();
     }
 
     public void anyMethodIsHeld() {

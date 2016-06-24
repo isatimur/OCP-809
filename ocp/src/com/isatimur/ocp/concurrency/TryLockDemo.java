@@ -12,6 +12,18 @@ public class TryLockDemo implements Task {
 
     final ReentrantLock reentrantLock = new ReentrantLock();
 
+    public static void main(String[] args) {
+        final int threadCount = 5;
+        final ExecutorService service = Executors.newFixedThreadPool(threadCount);
+        final Task task = new TryLockDemo();
+
+        for (int i = 0; i < threadCount; i++) {
+            service.execute(new Worker(task));
+        }
+
+        service.shutdown();
+    }
+
     @Override
     public void performTask() {
         try {
@@ -27,18 +39,6 @@ public class TryLockDemo implements Task {
         } catch (InterruptedException e) {
             System.out.println(e);
         }
-    }
-
-    public static void main(String[] args) {
-        final int threadCount = 5;
-        final ExecutorService service = Executors.newFixedThreadPool(threadCount);
-        final Task task = new TryLockDemo();
-
-        for (int i = 0; i < threadCount; i++) {
-            service.execute(new Worker(task));
-        }
-
-        service.shutdown();
     }
 
 }
