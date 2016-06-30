@@ -1,9 +1,14 @@
 package com.isatimur.ocp.localization;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  * Created by developer on 6/25/16.
@@ -40,7 +45,7 @@ public class IndianArt {
 
     private void setLocaleSpecificData(Locale locale) {
         ResourceBundle labels =
-                ResourceBundle.getBundle("com.isatimur.ocp.localization.IndianArtLabelsBundle", locale);
+            ResourceBundle.getBundle("com.isatimur.ocp.localization.IndianArtLabelsBundle", locale);
         String text = null;
         text = labels.getString("total_bookings");
         lTotalBookings.setText(text);
@@ -52,7 +57,7 @@ public class IndianArt {
         text = labels.getString("book_now");
         btnBook.setText(text);
         ImageIcon artImage = new ImageIcon
-                (labels.getString("sample_art"));
+            (labels.getString("sample_art"));
         lImage = new JLabel(artImage);
     }
 }

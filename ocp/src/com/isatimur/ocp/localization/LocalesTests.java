@@ -34,7 +34,6 @@ public class LocalesTests {
             msg("Display Name:" + loc.getDisplayName());
         }
 
-
     }
 
     static void msg(String str) {

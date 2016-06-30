@@ -7,12 +7,12 @@ import java.util.ListResourceBundle;
  */
 public class IndianArtLabelsBundle_fr extends ListResourceBundle {
     protected Object[][] getContents() {
-        return new Object[][]{
-                {"total_bookings", "Réservations totales"},
-                {"when", "Lors de"},
-                {"price", "Prix"},
-                {"book_now", "Réserver"},
-                {"sample_art", "flag_mango_oval.png"},
+        return new Object[][] {
+            {"total_bookings", "Réservations totales"},
+            {"when", "Lors de"},
+            {"price", "Prix"},
+            {"book_now", "Réserver"},
+            {"sample_art", "flag_mango_oval.png"},
         };
     }
 }

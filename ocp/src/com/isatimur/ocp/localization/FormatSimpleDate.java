@@ -9,10 +9,11 @@ import java.util.Locale;
  */
 public class FormatSimpleDate {
     public static void main(String[] args) {
-        Date date = new Date();
 
+        Date date = new Date();
         SimpleDateFormat dateFormatter = new SimpleDateFormat("G + YY ++ YYYY  +++ w ++++ W + D + d + E + a + H + h + m + s + S + z + Z", Locale.forLanguageTag("ru_RU"));
         System.out.println(dateFormatter.format(date));
+
     }
 
 }
