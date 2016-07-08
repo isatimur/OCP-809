@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class DirStream {
+public class DirStream{
     public static void main(String args[]) throws IOException {
 //        Path dir = Paths.get("/home/tisachenko/ROSTRUD/8");
 //        try (DirectoryStream<Path> stream=Files.newDirectoryStream(dir,"*.{txt~}")) {

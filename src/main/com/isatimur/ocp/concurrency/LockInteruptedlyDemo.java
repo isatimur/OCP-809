@@ -50,7 +50,7 @@ public class LockInteruptedlyDemo implements Task {
         reentrantLock.lock();
         try {
             System.out.println("anymethod started");
-        } finally {
+        }finally {
             reentrantLock.unlock();
         }
     }
@@ -61,7 +61,7 @@ public class LockInteruptedlyDemo implements Task {
         reentrantLock.lock();
         try {
             //perform task
-        } finally {
+        }finally {
             reentrantLock.unlock();
         }
     }

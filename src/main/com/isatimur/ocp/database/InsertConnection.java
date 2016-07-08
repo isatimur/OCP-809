@@ -28,7 +28,6 @@ public class InsertConnection {
         }
         System.out.println();
     }
-
     public static Connection getConnection() throws SQLException {
         String username = "postgres";
         String password = "admin";

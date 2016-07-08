@@ -10,8 +10,8 @@ public class A {
         new A().new B().new C().allTheX();
         System.out.println("++++++++++++++++++++++++++++++++++++Another way of getting to method allTheX");
         A a = new A();
-        A.B b = a.new B();
-        A.B.C c = b.new C();
+        B b = a.new B();
+        B.C c = b.new C();
         c.allTheX();
     }
 

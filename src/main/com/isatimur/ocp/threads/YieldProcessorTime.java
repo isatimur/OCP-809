@@ -5,7 +5,7 @@ package com.isatimur.ocp.threads;
  */
 public class YieldProcessorTime {
     public static void main(String[] args) {
-        Thread thread = new Thread() {
+        Thread thread = new Thread(){
             @Override
             public void run() {
                 yield();

@@ -17,7 +17,7 @@ public class MyMatcher {
 
 
         Path file = Paths.get("12-1.txt");
-        if (pathMatcher.matches(file)) {
+        if(pathMatcher.matches(file)){
             System.out.println(file);
         }
     }

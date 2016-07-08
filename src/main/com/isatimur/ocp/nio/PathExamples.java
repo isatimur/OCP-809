@@ -20,7 +20,7 @@ public class PathExamples {
         System.out.println(relativeDir.toAbsolutePath());
 
         Path file2 = Paths.get("java/file.txt");
-        Path dir2 = FileSystems.getDefault().getPath("main/java/");
+        Path dir2 = FileSystems.getDefault().getPath("java/");
 
         System.out.println((dir2).resolve(file2));
         System.out.println(file2.relativize(dir2));
@@ -28,7 +28,7 @@ public class PathExamples {
 
 
         Path file3 = Paths.get("/java/file.txt");
-        Path dir3 = FileSystems.getDefault().getPath("/main/java/");
+        Path dir3 = FileSystems.getDefault().getPath("/java/");
         System.out.println();
         System.out.println((dir3).resolve(file3));
         System.out.println((file3).resolve(dir3));

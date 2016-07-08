@@ -80,8 +80,8 @@ public class NewFlashCard implements ActionListener {
             if (Files.notExists(path.getParent())) {
                 Files.createDirectories(path.getParent());
             }
-            if (!Files.exists(path))
-                Files.createFile(path);
+            if(!Files.exists(path))
+            Files.createFile(path);
             PrintWriter pw = new PrintWriter(new FileWriter(path.toFile()));
             pw.println(note.getText());
             pw.flush();

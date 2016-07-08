@@ -17,7 +17,7 @@ public class CreateConnection {
             Statement statement = conn.createStatement();
             statement.execute("SELECT login,password FROM Users");
             ResultSet resultSet = statement.getResultSet();
-            while (resultSet.next()) {
+            while(resultSet.next()){
                 System.out.println(resultSet.getString("login"));
                 System.out.println(resultSet.getString("password"));
             }

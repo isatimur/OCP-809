@@ -89,7 +89,7 @@ public class CopyFlashCard implements ActionListener {
             Path source = Paths.get(copyFrom.getText());
             Path target = Paths.get(copyTo.getText());
 
-            OutputStream stream = new FileOutputStream(target.toFile(), true);
+            OutputStream stream = new FileOutputStream(target.toFile(),true);
             Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
 
             byte[] bytes = Files.readAllBytes(target);

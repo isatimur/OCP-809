@@ -22,7 +22,7 @@ public class Streams {
 
         String[] brics = {"Brazil", "Russia", "India", "China"};
         Arrays.sort(brics, null); // LINE A
-        for (String country : brics) {
+        for(String country : brics) {
             System.out.print(country + " ");
         }
 

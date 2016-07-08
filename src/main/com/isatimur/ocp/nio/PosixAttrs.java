@@ -14,10 +14,10 @@ import java.nio.file.attribute.PosixFilePermissions;
 public class PosixAttrs {
     public static void main(String[] args) throws IOException {
         Path path = Paths.get("/home/tisachenko/projects/OCP-809/myData.data");
-        PosixFileAttributeView view = Files.getFileAttributeView(path, PosixFileAttributeView.class);
+        PosixFileAttributeView view = Files.getFileAttributeView(path,PosixFileAttributeView.class);
 
         PosixFileAttributes attributes = view.readAttributes();
-        if (attributes.owner().getName().equals("tisachenko")) {
+        if(attributes.owner().getName().equals("tisachenko")){
             view.setPermissions(PosixFilePermissions.fromString("rwxrwxrwx"));
 
         } else {

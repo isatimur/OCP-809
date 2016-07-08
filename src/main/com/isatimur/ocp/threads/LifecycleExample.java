@@ -8,8 +8,8 @@ import java.util.Set;
 public class LifecycleExample {
     public static void main(String[] args) {
         Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
-        for (Thread thread : threadSet) {
-            System.out.println(thread + "----------------------" + thread.getState());
+        for(Thread thread: threadSet){
+            System.out.println(thread+"----------------------"+ thread.getState());
         }
 
     }

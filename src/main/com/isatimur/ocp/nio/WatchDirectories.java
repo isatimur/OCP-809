@@ -35,9 +35,7 @@ public class WatchDirectories {
                     }
 
                 }
-                if (!watchKey.reset()) {
-                    break;
-                }
+                if(!watchKey.reset()){break;}
             }
 
         } catch (Exception e) {

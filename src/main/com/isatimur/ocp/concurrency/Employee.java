@@ -37,7 +37,7 @@ public class Employee extends Thread {
             } finally {
                 bus.lock.unlock();
             }
-        } catch (InterruptedException e) {
+        } catch(InterruptedException e){
             System.out.println(name + " : Interrupted!");
             Thread.currentThread().interrupt();
         }
@@ -47,7 +47,7 @@ public class Employee extends Thread {
 class Bus {
     Lock lock = new ReentrantLock();
 
-    public void boardBus(String name) {
+    public void boardBus(String name){
         System.out.println(name + ": boared");
     }
 

@@ -32,7 +32,7 @@ public class Twist_and_Tale_8_1 {
         System.out.println(joiner.toString());
 
         joiner = new StringJoiner(",");
-        path = path.normalize();
+        path =path.normalize();
         for (int i = 0; i < path.getNameCount(); i++) {
             joiner.add(path.getName(i).toString());
         }

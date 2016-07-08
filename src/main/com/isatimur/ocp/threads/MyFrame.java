@@ -38,11 +38,10 @@ class MovingBall extends Thread {
                 e.printStackTrace();
             }
             graphics.setColor(Color.WHITE);
-            graphics.fillRect(0, 0, frame.getWidth(), frame.getHeight());
-            ++xPos;
-            ++yPos;
+            graphics.fillRect(0,0,frame.getWidth(),frame.getHeight());
+            ++xPos;++yPos;
             graphics.setColor(Color.RED);
-            graphics.fillOval(xPos, yPos, radius, radius);
+            graphics.fillOval(xPos,yPos,radius,radius);
 
         }
 
