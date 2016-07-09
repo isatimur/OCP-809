@@ -22,7 +22,8 @@ public class TestAutoCloseOrder {
         try (MyResource res1 = new MyResource("1");
              MyResource res2 = new MyResource("2")) {
             System.out.println("within try-with-resources");
-        } finally {
+        }
+        finally {
             System.out.println("finally");
         }
     }

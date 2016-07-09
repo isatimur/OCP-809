@@ -10,13 +10,14 @@ public class AppFactory {
 
         if (filename.endsWith(".txt")) {
             app = new TextEditor();
-        } else if (filename.endsWith(".doc")) {
+        }
+        else if (filename.endsWith(".doc")) {
             app = new WordProcessor();
-        } else {
+        }
+        else {
             app = new OtherEditor();
         }
         return app;
-
 
     }
 }

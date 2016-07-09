@@ -24,6 +24,5 @@ public class ManipulateHashSet {
             System.out.println(e);
         }
 
-
     }
 }

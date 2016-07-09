@@ -18,5 +18,4 @@ public abstract class DAOFactory {
 
     protected abstract DeptDAO getDeptDAO();
 
-
 }

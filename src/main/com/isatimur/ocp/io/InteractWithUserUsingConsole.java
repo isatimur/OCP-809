@@ -22,13 +22,16 @@ public class InteractWithUserUsingConsole {
                     File filik = new File(file);
                     filik.deleteOnExit();
                     console.format("Deleted %s", file);
-                } else {
+                }
+                else {
                     console.format("No password. Cancelling deletion");
                 }
-            } else {
+            }
+            else {
                 console.format("Operatio cancelleed... %nNow exiting.");
             }
-        } else {
+        }
+        else {
             System.out.println("No console");
         }
     }

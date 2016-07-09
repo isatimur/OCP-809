@@ -17,6 +17,7 @@ public class TestLinkedList {
         System.out.println(list.remove("e"));
 
         Iterator<String> it = list.iterator();
-        while (it.hasNext()) System.out.println(it.next());
+        while (it.hasNext())
+            System.out.println(it.next());
     }
 }

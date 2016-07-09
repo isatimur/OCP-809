@@ -26,7 +26,6 @@ public class PathExamples {
         System.out.println(file2.relativize(dir2));
         System.out.println(dir2.relativize(file2));
 
-
         Path file3 = Paths.get("/java/file.txt");
         Path dir3 = FileSystems.getDefault().getPath("/java/");
         System.out.println();
@@ -34,7 +33,6 @@ public class PathExamples {
         System.out.println((file3).resolve(dir3));
         System.out.println(file3.relativize(dir3));
         System.out.println(dir3.relativize(file3));
-
 
 //        Path dirr = Paths.get("code");
 //        Path dirC = Paths.get("")

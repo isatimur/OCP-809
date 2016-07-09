@@ -2,7 +2,21 @@ package com.isatimur.ocp.lambda;
 
 import java.util.function.Function;
 
-import static javafx.scene.input.KeyCode.R;
+interface Comparator<T> {
+    public static <A> Comparator<A> comparing(Function<A, Comparable> func) {
+        return (t1, t2) -> func.apply(t1).compareTo(func.apply(t2));
+    }
+
+    int compare(T t1, T t2);
+
+    public default Comparator<T> thenComparing(Comparator<T> cmp) {
+        return (p1, p2) -> (compare(p1, p2) == 0 ? cmp.compare(p1, p2) : compare(p1, p2));
+    }
+
+    public default Comparator<T> thenComparing(Function<T, Comparable> func) {
+        return thenComparing(comparing(func));
+    }
+}
 
 /**
  * Created by dns2 on 05.07.2016.
@@ -28,23 +42,6 @@ public class ComparingClass {
         Comparator<Person> cmp = cmpPerson.thenComparing(cmpPersonFirstName);
     }
 
-
-}
-
-interface Comparator<T> {
-    int compare(T t1, T t2);
-
-    public static <A> Comparator<A> comparing(Function<A, Comparable> func) {
-        return (t1, t2) -> func.apply(t1).compareTo(func.apply(t2));
-    }
-
-    public default Comparator<T> thenComparing(Comparator<T> cmp) {
-        return (p1, p2) -> (compare(p1, p2) == 0 ? cmp.compare(p1, p2) : compare(p1, p2));
-    }
-
-    public default Comparator<T> thenComparing(Function<T, Comparable> func) {
-        return thenComparing(comparing(func));
-    }
 }
 
 class Person {
@@ -85,9 +82,9 @@ class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "age=" + age +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+            "age=" + age +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            '}';
     }
 }

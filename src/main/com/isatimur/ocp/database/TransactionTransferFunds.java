@@ -19,28 +19,30 @@ public class TransactionTransferFunds {
             statement = con.createStatement();
 
             int result = statement.executeUpdate("" +
-                    "INSERT INTO transaction VALUES " +
-                    "(1,'5555','db',55.0, '2000-01-21')");
+                "INSERT INTO transaction VALUES " +
+                "(1,'5555','db',55.0, '2000-01-21')");
 
             result = statement.executeUpdate("" +
-                    "INSERT INTO transaction VALUES " +
-                    "(2,'7777','cr',55.0, '2000-01-21')");
+                "INSERT INTO transaction VALUES " +
+                "(2,'7777','cr',55.0, '2000-01-21')");
 
             result = statement.executeUpdate("" +
-                    "UPDATE bank_acct " +
-                    "SET balance = 944.00" +
-                    "WHERE acct_no='5555'");
+                "UPDATE bank_acct " +
+                "SET balance = 944.00" +
+                "WHERE acct_no='5555'");
             result = statement.executeUpdate("" +
-                    "UPDATE bank_acct " +
-                    "SET balance = 155.00" +
-                    "WHERE acct_no='7777'");
+                "UPDATE bank_acct " +
+                "SET balance = 155.00" +
+                "WHERE acct_no='7777'");
             con.commit();
 
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println(e);
             try {
                 con.rollback();
-            } catch (SQLException e1) {
+            }
+            catch (SQLException e1) {
                 System.out.println(e1);
             }
         }

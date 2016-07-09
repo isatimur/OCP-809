@@ -35,9 +35,11 @@ public class LockUnlockDemo implements Task {
             System.out.println(Thread.currentThread().getName() + ": Lock acquired.");
             System.out.println("Processing...");
             Thread.sleep(100);
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e) {
             System.out.println(e);
-        } finally {
+        }
+        finally {
             System.out.println(Thread.currentThread().getName() + ": Lock released.");
             reentrantLock.unlock();
         }

@@ -63,10 +63,12 @@ class Parcel<T extends Gift, Wrappable, Exchangeble> {
         if (t instanceof Gift) {
             if (t.getWeight() > 10) {
                 System.out.println("Ship by courier ABC");
-            } else {
+            }
+            else {
                 System.out.println("Ship by courier XYZ");
             }
-        } else {
+        }
+        else {
             System.out.println("Wrappable or Exchangeble");
         }
     }

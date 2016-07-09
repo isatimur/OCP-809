@@ -1,6 +1,10 @@
 package com.isatimur.ocp.mock_tests.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -16,8 +20,10 @@ public class SynchronizedCollections {
         birds.addAll(source);
 
         synchronized (mammals) {
-            for (Integer f : fish) fish.add(4);
-            for (Integer d : mammals) mammals.add(4);
+            for (Integer f : fish)
+                fish.add(4);
+            for (Integer d : mammals)
+                mammals.add(4);
 //            Iterator<Integer> iterator = mammals.iterator();
 //            while (iterator.hasNext()){
 //                iterator.next();
@@ -28,8 +34,8 @@ public class SynchronizedCollections {
 //            }
         }
 
-
-        for (Integer b : birds) birds.add(5);
+        for (Integer b : birds)
+            birds.add(5);
         System.out.println(fish.size() + " " + mammals.size() + " " + birds.size());
     }
 

@@ -11,7 +11,8 @@ public class DemoThrowsException {
         if (!found) {
             throw new FileNotFoundException("MIssing file");
 
-        } else {
+        }
+        else {
             System.out.println("File has been found");
         }
     }
@@ -23,7 +24,8 @@ public class DemoThrowsException {
     void useReadFile(String name) throws FileNotFoundException {
         try {
             readFile(name);
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }

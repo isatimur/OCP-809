@@ -18,12 +18,10 @@ public class Courier {
         stringList.add("Shreya");
         wrapList(stringList);
 
-
         List<? super Gift> list1 = new ArrayList<Gift>();
         List<? super Gift> list2 = new ArrayList<Object>();
 //        List<? super Gift> list3 = new ArrayList<MyPhone>();
         List<? super MyPhone> list3 = new ArrayList<Gift>();
-
 
         List<? super Gift> giftList = new ArrayList<Gift>();
         giftList.add(new Gift());
@@ -33,7 +31,6 @@ public class Courier {
         for (Object obj : giftList) {
             System.out.println(obj);
         }
-
 
     }
 

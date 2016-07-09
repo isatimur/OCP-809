@@ -24,7 +24,6 @@ class CustomMap<K, V> implements MyMap<K, V> {
     K key;
     V value;
 
-
     @Override
     public void put(K key, V value) {
         this.key = key;

@@ -7,7 +7,8 @@ public class SuppressedException {
     public static void main(String[] args) throws Exception {
         try (RiftRaft raft = new RiftRaft()) {
             raft.crossRapid();
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println("Exception caught: " + e);
             Throwable[] exc = e.getSuppressed();
             if (exc.length > 0) {

@@ -10,8 +10,8 @@ import java.io.IOException;
 public class TwistAndTale_7_1 {
     public static void main(String[] args) throws IOException {
         try (
-                FileInputStream in = new FileInputStream("/home/tisachenko/projects/OCP-809/src/com/isatimur/ocp/io/TwistAndTale_7_1.java");
-                FileOutputStream out = new FileOutputStream("/home/tisachenko/projects/OCP-809/src/com/isatimur/ocp/io/Copy.java");
+            FileInputStream in = new FileInputStream("/home/tisachenko/projects/OCP-809/src/com/isatimur/ocp/io/TwistAndTale_7_1.java");
+            FileOutputStream out = new FileOutputStream("/home/tisachenko/projects/OCP-809/src/com/isatimur/ocp/io/Copy.java");
         ) {
             int data;
             byte[] byteArr = new byte[2048];

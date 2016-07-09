@@ -33,13 +33,14 @@ public class LockInteruptedlyDemo implements Task {
                 Thread.sleep(2000);
 //                anyMethodIsHeld();
 
-            } finally {
+            }
+            finally {
                 System.out.println(Thread.currentThread().getName() + ": Lock released.");
                 reentrantLock.unlock();
             }
 
-
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e) {
             System.out.println(Thread.currentThread().getName() + " : Interrupted!");
             Thread.currentThread().interrupt();
         }
@@ -50,18 +51,19 @@ public class LockInteruptedlyDemo implements Task {
         reentrantLock.lock();
         try {
             System.out.println("anymethod started");
-        }finally {
+        }
+        finally {
             reentrantLock.unlock();
         }
     }
-
 
     public void anyMethodHold() {
         assert reentrantLock.getHoldCount() == 0;
         reentrantLock.lock();
         try {
             //perform task
-        }finally {
+        }
+        finally {
             reentrantLock.unlock();
         }
     }

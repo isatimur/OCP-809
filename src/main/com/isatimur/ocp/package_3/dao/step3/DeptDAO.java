@@ -1,6 +1,5 @@
 package com.isatimur.ocp.package_3.dao.step3;
 
-
 import java.util.Collection;
 
 /**

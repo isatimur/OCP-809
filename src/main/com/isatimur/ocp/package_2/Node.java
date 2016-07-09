@@ -27,7 +27,6 @@ class Tree {
         new TreeSort(asceding).sort();
     }
 
-
     class TreeSort {
         boolean ascedingOrder = true;
 

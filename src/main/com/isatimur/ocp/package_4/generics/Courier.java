@@ -16,7 +16,7 @@ public abstract class Courier {
                 super.deliver(array);
             }
         };
-        courier.deliver(new String[]{"fruits", "meat", "vegetables"});
+        courier.deliver(new String[] {"fruits", "meat", "vegetables"});
 
         MyPhone<Double> c = new MyPhone<Double>("Android");
         System.out.println(c.getObject().toString());

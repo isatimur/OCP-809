@@ -1,7 +1,7 @@
 package com.isatimur.ocp.nio;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileOutputStream;
@@ -13,6 +13,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  * Created by tisachenko on 16.04.16.
@@ -89,15 +96,15 @@ public class CopyFlashCard implements ActionListener {
             Path source = Paths.get(copyFrom.getText());
             Path target = Paths.get(copyTo.getText());
 
-            OutputStream stream = new FileOutputStream(target.toFile(),true);
+            OutputStream stream = new FileOutputStream(target.toFile(), true);
             Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
 
             byte[] bytes = Files.readAllBytes(target);
 
             fileContents.setText(new String(bytes, Charset.defaultCharset()));
 
-
-        } catch (IOException e1) {
+        }
+        catch (IOException e1) {
             JOptionPane.showMessageDialog(frame, e1.toString());
 
         }

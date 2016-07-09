@@ -29,16 +29,16 @@ public class AutoClose {
 //        }
 //    }
 
-
     void copyFileContents(String inFile, String outFile)
-            throws IOException {
+        throws IOException {
         try (FileInputStream fin = new FileInputStream(inFile);
              FileOutputStream fout = new FileOutputStream(outFile)) {
             byte[] buffer = new byte[1024];
             int i = 0;
             while ((i = fin.read(buffer)) != -1)
                 fout.write(buffer, 0, i);
-        } finally {
+        }
+        finally {
 //            won't compile cause fileoutputstream is out of try scope!!!
 //            fout = new FileOutputStream(inFile);
         }

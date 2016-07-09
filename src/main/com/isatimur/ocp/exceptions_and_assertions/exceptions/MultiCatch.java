@@ -21,9 +21,11 @@ public class MultiCatch {
             File file = new File(fileName);
             FileInputStream inputStream = new FileInputStream(file);
             Statement statement = connection.createStatement();
-        } catch (FileNotFoundException | SQLException e) {
+        }
+        catch (FileNotFoundException | SQLException e) {
             System.out.println(e.toString());
-        } finally {
+        }
+        finally {
             System.out.println("finally");
         }
     }

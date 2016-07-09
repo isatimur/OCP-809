@@ -8,7 +8,6 @@ public class SolyankaExceptions {
         new AutoClose2().useCloseableResources();
     }
 
-
 }
 
 class MyAutocloseableResource implements AutoCloseable {
@@ -27,7 +26,8 @@ class AutoClose2 {
     void useCloseableResources() {
         try (MyAutocloseableResource resource = new MyAutocloseableResource();) {
             System.out.println("within try with resources");
-        } finally {
+        }
+        finally {
             System.out.println("finally");
         }
     }

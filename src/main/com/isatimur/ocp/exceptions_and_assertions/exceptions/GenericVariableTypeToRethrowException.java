@@ -10,14 +10,15 @@ public class GenericVariableTypeToRethrowException {
     public static void main(String[] args) throws IOException, SQLException {
         String source = "DBMS";
 
-
         try {
             if (source.equals("DBMS")) {
                 throw new SQLException();
-            } else {
+            }
+            else {
                 throw new IOException();
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
 //            throw new Exception();
             throw e;
         }

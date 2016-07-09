@@ -40,7 +40,6 @@ package com.isatimur.ocp.package_2;
 //    }
 //}
 
-
 enum Level {
 
     BEGINNER;
@@ -52,7 +51,6 @@ enum Level {
     Level() {
         System.out.println("constructor");
     }
-
 
     public static void main(String... args) {
         System.out.println(Level.BEGINNER);

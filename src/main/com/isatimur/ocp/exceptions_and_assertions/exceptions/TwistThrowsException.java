@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 //b) add throws Exception to line 29 like it is right now
 public class TwistThrowsException {
     public static void main(String[] args)
-            throws FileNotFoundException {
+        throws FileNotFoundException {
         new TwistThrowsException().useReadFile("a");
     }
 
@@ -20,11 +20,12 @@ public class TwistThrowsException {
     }
 
     void useReadFile(String name)
-            throws FileNotFoundException {
+        throws FileNotFoundException {
         System.out.println("useReadFile");
         try {
             readFile();
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e) {
             e.printStackTrace();
 
         }

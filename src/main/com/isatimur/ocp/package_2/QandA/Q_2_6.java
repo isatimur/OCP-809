@@ -9,7 +9,6 @@ public class Q_2_6 {
     }
 }
 
-
 class MyClass {
     void aVoid() {
         //enum must not be local

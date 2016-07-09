@@ -12,6 +12,7 @@ public class SingleConnection {
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection("");
     }
+
     public static void main(String[] args) {
 
     }

@@ -10,15 +10,15 @@ import java.nio.channels.FileChannel;
  */
 public class ChannelsUsage {
     public static void main(String[] args) throws IOException {
-        RandomAccessFile file = new RandomAccessFile("./ReadChars.java","rw");
+        RandomAccessFile file = new RandomAccessFile("./ReadChars.java", "rw");
         FileChannel channel = file.getChannel();
         String dsd = "dasdasdasdasdasdasdasdasdasdasd\r\nsdfsdfsdkfnkasdfasdjgjnasbndg34uiretuweriytuyerutyuierytyeruit\r\nsdfsdf" +
-                "sdfsdfsdfsdfsdff4gGDDDDDDDDDDDDSFSDFDF";
+            "sdfsdfsdfsdfsdff4gGDDDDDDDDDDDDSFSDFDF";
         ByteBuffer buffer = ByteBuffer.allocate(48);
         byte[] bytes = dsd.getBytes();
 //        while()
         ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
-        while(byteBuffer.hasRemaining()){
+        while (byteBuffer.hasRemaining()) {
             buffer.put(byteBuffer.get());
             buffer.flip();
             int bufRead = channel.write(buffer);
@@ -29,11 +29,11 @@ public class ChannelsUsage {
 //        channel.close();
 
 //        buffer.rewind();
-        int bufRead = channel.read(buffer,0);
-        while(bufRead!=-1){
+        int bufRead = channel.read(buffer, 0);
+        while (bufRead != -1) {
 //            System.out.println("Read: " + bufRead);
             buffer.flip();
-            while (buffer.hasRemaining()){
+            while (buffer.hasRemaining()) {
                 System.out.print((char)buffer.get());
             }
             buffer.clear();

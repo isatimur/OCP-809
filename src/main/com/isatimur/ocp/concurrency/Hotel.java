@@ -30,7 +30,8 @@ public class Hotel {
                 if (!service.awaitTermination(60, TimeUnit.SECONDS))
                     System.err.println("Pool did not terminate");
             }
-        } catch (InterruptedException ie) {
+        }
+        catch (InterruptedException ie) {
             service.shutdownNow();
             Thread.currentThread().interrupt();
         }

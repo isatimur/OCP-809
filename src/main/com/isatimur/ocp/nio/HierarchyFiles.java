@@ -3,7 +3,11 @@ package com.isatimur.ocp.nio;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.*;
+import java.nio.file.FileVisitResult;
+import java.nio.file.FileVisitor;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -20,7 +24,8 @@ public class HierarchyFiles {
         Path sourceDir = Paths.get("/home/tisachenko/ROSTRUD/");
         try {
             Files.walkFileTree(sourceDir, new LocalFileVisitor());
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
         System.out.println(flashCardsMap);
@@ -30,7 +35,6 @@ public class HierarchyFiles {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
 
     }
 
@@ -59,7 +63,7 @@ public class HierarchyFiles {
             if (filename.endsWith(".txt")) {
                 LinkedList<String> tips = new LinkedList<>();
                 try (
-                        BufferedReader reader = new BufferedReader(new FileReader(file.toFile()));
+                    BufferedReader reader = new BufferedReader(new FileReader(file.toFile()));
                 )
 
                 {
@@ -68,7 +72,8 @@ public class HierarchyFiles {
                         tips.add(line);
                     }
 
-                } catch (IOException exc) {
+                }
+                catch (IOException exc) {
                     System.out.println(exc);
                 }
                 flashCardsMap.put(filename.substring(0, filename.length() - 4), tips);

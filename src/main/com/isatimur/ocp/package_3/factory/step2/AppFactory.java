@@ -9,7 +9,6 @@ public abstract class AppFactory {
         App app = getApp();
         return app;
 
-
     }
 
     public abstract App getApp();

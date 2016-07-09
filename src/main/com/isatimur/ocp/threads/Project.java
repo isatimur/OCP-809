@@ -21,7 +21,6 @@ class ScreenDesign extends Thread {
         }
     }
 
-
 }
 
 class Developer {
@@ -37,7 +36,8 @@ class Developer {
             design.join();
             System.out.println("Coding phase start");
 
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e) {
             System.out.println(e);
         }
     }

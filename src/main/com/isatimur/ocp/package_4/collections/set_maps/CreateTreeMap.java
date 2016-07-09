@@ -1,6 +1,10 @@
 package com.isatimur.ocp.package_4.collections.set_maps;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 /**
  * Created by tisachenko on 15.03.16.
@@ -30,8 +34,8 @@ public class CreateTreeMap {
         treeSet.add(new Person("Petya", 30));
 
         Iterator<Person> iterator = treeSet.iterator();
-        while (iterator.hasNext()) System.out.println(iterator.next());
-
+        while (iterator.hasNext())
+            System.out.println(iterator.next());
 
     }
 
@@ -73,7 +77,6 @@ class Person implements Comparable<Person> {
         return (this.age - o.age);
     }
 
-
 //    @Override
 //    public int compareTo(Person o) {
 //        return 0;
@@ -82,7 +85,7 @@ class Person implements Comparable<Person> {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                '}';
+            "name='" + name + '\'' +
+            '}';
     }
 }
