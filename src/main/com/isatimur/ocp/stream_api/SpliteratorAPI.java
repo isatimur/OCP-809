@@ -21,6 +21,7 @@ public class SpliteratorAPI {
             Spliterator<Person> peopleSpliterator = new PersonSpliterator(lineSliterator);
 
             Stream<Person> people = StreamSupport.stream(peopleSpliterator, false);
+
             people.forEach(System.out::println);
 
         } catch (IOException e) {
