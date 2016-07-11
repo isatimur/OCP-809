@@ -30,7 +30,6 @@ public class GenericInterfaces {
 
 class MapLegendNonGeneric implements MyMap<String, Integer> {
 
-
     @Override
     public void put(String key, Integer value) {
 
@@ -57,7 +56,6 @@ class MapLegendNonGeneric2<V> implements MyMap<String, V> {
 }
 
 class MapLegendNonGeneric3<K, V> implements MyMap<K, V> {
-
 
     @Override
     public void put(K key, V value) {

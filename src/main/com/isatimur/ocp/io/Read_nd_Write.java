@@ -26,12 +26,10 @@ public class Read_nd_Write {
 //                fileOutputStream.write(buff);
 //            }
 
-
             byte[] buff = new byte[1024];
             while ((data = fileInputStream.read(buff)) != -1) {
                 fileOutputStream.write(buff, 0, data);
             }
-
 
         }
     }

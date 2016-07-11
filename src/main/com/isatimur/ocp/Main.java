@@ -1,11 +1,6 @@
 package com.isatimur.ocp;
 
-import com.google.common.base.Joiner;
-
-import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Main {
 
@@ -37,12 +32,12 @@ public class Main {
 //                text = text.replaceAll(regex, map.get(key));
 //            }
 //        }
-        text = text.replaceAll(regex,"_____");
+        text = text.replaceAll(regex, "_____");
         String regexPast = "[{][ a-zA-Z[._-] ]+[?].*[}]";
-        text = text.replaceAll(regexPast,"_____");
+        text = text.replaceAll(regexPast, "_____");
         String regexLastPast = "[{][ a-zA-Z[._-] ]+[?]";
-        text = text.replaceAll(regexLastPast,"_____");
-        text = text.replaceAll("[}]","");
+        text = text.replaceAll(regexLastPast, "_____");
+        text = text.replaceAll("[}]", "");
 
         System.out.println(text);
 

@@ -31,7 +31,6 @@ public final class ImmutableCircle {
     }
 }
 
-
 class Point {
     private int xPos, yPos;
 

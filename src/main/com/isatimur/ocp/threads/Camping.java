@@ -24,7 +24,8 @@ class GoRafting extends Thread {
         synchronized (friend) {
             try {
                 friend.wait();
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e) {
                 System.out.println(e);
             }
             System.out.println("Reached:" + friend.reached + ", going rafting");
@@ -41,7 +42,8 @@ class Friend extends Thread {
             try {
                 Thread.sleep(20000);
 
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e) {
                 System.out.println(e);
             }
             confirmReached();

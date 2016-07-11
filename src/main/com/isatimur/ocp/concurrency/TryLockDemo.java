@@ -29,14 +29,16 @@ public class TryLockDemo implements Task {
         try {
             if (reentrantLock.tryLock(100, TimeUnit.MILLISECONDS)) {
                 try {
-                    System.out.println(Thread.currentThread().getName()+ " : performing task ... ");
-                } finally {
+                    System.out.println(Thread.currentThread().getName() + " : performing task ... ");
+                }
+                finally {
 //                    System.out.println();
                     System.out.println(Thread.currentThread().getName() + " : releasing...");
                     reentrantLock.unlock();
                 }
             }
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e) {
             System.out.println(e);
         }
     }

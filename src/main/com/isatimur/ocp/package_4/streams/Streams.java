@@ -11,7 +11,6 @@ import java.util.Random;
 public class Streams {
     public static void main(String[] args) {
 
-
         new Random().ints().limit(15).forEach(System.out::println);
 
         List<Integer> intList = new LinkedList<>();
@@ -19,10 +18,9 @@ public class Streams {
         System.out.println("First type: " + intList.getClass());
         System.out.println("Second type:" + dblList.getClass());
 
-
         String[] brics = {"Brazil", "Russia", "India", "China"};
         Arrays.sort(brics, null); // LINE A
-        for(String country : brics) {
+        for (String country : brics) {
             System.out.print(country + " ");
         }
 

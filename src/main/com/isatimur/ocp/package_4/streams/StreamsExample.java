@@ -8,11 +8,9 @@ import java.util.regex.Pattern;
  */
 public class StreamsExample {
     public static void main(String[] args) {
-        Pattern.compile(" ").splitAsStream("java 8 stream").flatMapToInt(i -> i.chars()).distinct().forEach(s -> System.out.print((char) s));
-
+        Pattern.compile(" ").splitAsStream("java 8 stream").flatMapToInt(i -> i.chars()).distinct().forEach(s -> System.out.print((char)s));
 
         System.out.println();
-
 
         new Random().ints().limit(5).forEach(System.out::println);
     }

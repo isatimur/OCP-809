@@ -22,12 +22,13 @@ public class InsertConnection {
 //                System.out.println(resultSet.getString("password"));
 //            }
 
-
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println(e);
         }
         System.out.println();
     }
+
     public static Connection getConnection() throws SQLException {
         String username = "postgres";
         String password = "admin";

@@ -1,6 +1,10 @@
 package com.isatimur.ocp.database;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Created by tisachenko on 02.05.16.
@@ -17,13 +21,13 @@ public class CreateConnection {
             Statement statement = conn.createStatement();
             statement.execute("SELECT login,password FROM Users");
             ResultSet resultSet = statement.getResultSet();
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 System.out.println(resultSet.getString("login"));
                 System.out.println(resultSet.getString("password"));
             }
 
-
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println(e);
         }
         System.out.println();

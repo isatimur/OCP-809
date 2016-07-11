@@ -32,6 +32,5 @@ public class UseSingelton {
         Singelton6 singelton62 = Singelton6.getInstance();
         System.out.println(singelton61 == singelton62);
 
-
     }
 }

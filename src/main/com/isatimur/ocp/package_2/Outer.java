@@ -26,7 +26,6 @@ public class Outer {
         int innerInstance = outerStatic;
     }
 
-
 }
 
 class Outer1 {

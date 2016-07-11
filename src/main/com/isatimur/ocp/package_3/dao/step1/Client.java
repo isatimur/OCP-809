@@ -16,6 +16,7 @@ public class Client {
         emp.age = 40;
         dao.update(emp);
         Emp emp2 = dao.get(11);
-        if (emp2 != null) dao.delete(emp2);
+        if (emp2 != null)
+            dao.delete(emp2);
     }
 }

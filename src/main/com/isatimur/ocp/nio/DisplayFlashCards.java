@@ -1,7 +1,8 @@
 package com.isatimur.ocp.nio;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -11,6 +12,12 @@ import java.nio.file.Paths;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.ListIterator;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  * Created by tisachenko on 24.04.16.
@@ -73,7 +80,6 @@ public class DisplayFlashCards implements ActionListener {
         frame.getContentPane().add(mainPanel);
         frame.setVisible(true);
 
-
     }
 
     private void accessAllExamTips() throws IOException {
@@ -92,7 +98,8 @@ public class DisplayFlashCards implements ActionListener {
     private void showNextTip() {
         if (tipsIterator != null && tipsIterator.hasNext()) {
             lblFlashcard.setText("<html>" + tipsIterator.next() + "</html>");
-        } else {
+        }
+        else {
             if (examObjIterator.hasNext()) {
                 String currentObj = examObjIterator.next();
                 lblObjectiveNo.setText(currentObj);
@@ -103,13 +110,13 @@ public class DisplayFlashCards implements ActionListener {
             }
         }
 
-
     }
 
     private void showPrevTip() {
         if (tipsIterator != null && tipsIterator.hasPrevious()) {
             lblFlashcard.setText("<html>" + tipsIterator.previous() + "</html>");
-        } else {
+        }
+        else {
             if (examObjIterator.hasPrevious()) {
                 String currentObj = examObjIterator.previous();
                 lblObjectiveNo.setText(currentObj);
@@ -120,7 +127,6 @@ public class DisplayFlashCards implements ActionListener {
             }
         }
 
-
     }
 
     @Override
@@ -128,10 +134,12 @@ public class DisplayFlashCards implements ActionListener {
         try {
             if (e.getActionCommand().equals(" < ")) {
                 showPrevTip();
-            } else {
+            }
+            else {
                 showNextTip();
             }
-        } catch (Exception e1) {
+        }
+        catch (Exception e1) {
             JOptionPane.showMessageDialog(frame, e1.toString());
         }
     }

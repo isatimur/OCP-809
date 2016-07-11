@@ -11,7 +11,8 @@ public abstract class DAOFactory {
         EmpDAO dao = null;
         if (DBType == ORACLE) {
             dao = new EmpDAOOracleImpl();
-        } else if (DBType == MYSQL) {
+        }
+        else if (DBType == MYSQL) {
             dao = new EmpDAOMySQLImpl();
         }
         return dao;

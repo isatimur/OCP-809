@@ -10,7 +10,6 @@ public class Shipment extends Thread {
     Inventory loc1, loc2;
     int qty;
 
-
     public Shipment(Inventory loc1, Inventory loc2, int qty) {
         this.loc1 = loc1;
         this.loc2 = loc2;
@@ -42,10 +41,12 @@ public class Shipment extends Thread {
                 loc2.lock.unlock();
                 loc1.lock.unlock();
 
-            } else {
+            }
+            else {
                 System.out.println("Locking 2 false: " + loc2.name);
             }
-        } else {
+        }
+        else {
             System.out.println("Locking 1 false: " + loc1.name);
         }
     }

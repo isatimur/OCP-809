@@ -1,7 +1,6 @@
 package com.isatimur.ocp.package_3.different_package;
 
 import com.isatimur.ocp.package_3.ReviewInterfaces;
-
 import java.util.List;
 import java.util.stream.Stream;
 

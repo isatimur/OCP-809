@@ -16,8 +16,8 @@ public class UsingPrintWriter {
             pw.write(97);
             pw.write("String");
             pw.write("PartialString", 0, 4);
-            pw.write(new char[]{'c', 'h', 'a', 'r'});
-            pw.write(new char[]{'c', 'h', 'a', 'r'}, 1, 1);
+            pw.write(new char[] {'c', 'h', 'a', 'r'});
+            pw.write(new char[] {'c', 'h', 'a', 'r'}, 1, 1);
 
             pw.println(true);
             pw.println('a');
@@ -29,8 +29,8 @@ public class UsingPrintWriter {
 
             pw.close();
 
-
-        } catch (IOException ex) {
+        }
+        catch (IOException ex) {
             System.out.println(ex);
         }
     }

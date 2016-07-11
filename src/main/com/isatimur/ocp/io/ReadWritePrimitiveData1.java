@@ -1,6 +1,10 @@
 package com.isatimur.ocp.io;
 
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * Created by tisachenko on 05.04.16.
@@ -28,7 +32,6 @@ public class ReadWritePrimitiveData1 {
             System.out.println(dis.readUTF());
 
 //            System.out.println(dis.readBoolean());
-
 
         }
     }

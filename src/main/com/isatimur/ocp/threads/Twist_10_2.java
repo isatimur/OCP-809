@@ -10,7 +10,6 @@ public class Twist_10_2 {
         throw new RuntimeException("main");
     }
 
-
 }
 
 class Sing extends Thread {

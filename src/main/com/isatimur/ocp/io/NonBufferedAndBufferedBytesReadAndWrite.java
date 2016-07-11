@@ -10,8 +10,8 @@ import java.io.IOException;
 public class NonBufferedAndBufferedBytesReadAndWrite {
     public static void main(String[] args) throws IOException {
         try (
-                FileInputStream in = new FileInputStream("Кнут Д. - Искусство программирования для ЭВМ том 3 (1-е издание) - 1978.pdf");
-                FileOutputStream out = new FileOutputStream("/home/tisachenko/projects/OCP-809/Knut_copy.pdf")
+            FileInputStream in = new FileInputStream("Кнут Д. - Искусство программирования для ЭВМ том 3 (1-е издание) - 1978.pdf");
+            FileOutputStream out = new FileOutputStream("/home/tisachenko/projects/OCP-809/Knut_copy.pdf")
         ) {
             long start = System.currentTimeMillis();
             int data;

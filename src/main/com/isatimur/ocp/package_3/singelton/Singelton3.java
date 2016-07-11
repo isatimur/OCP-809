@@ -12,7 +12,8 @@ public class Singelton3 {
     }
 
     synchronized public static Singelton3 getInstance() {
-        if (anInstance == null) anInstance = new Singelton3();
+        if (anInstance == null)
+            anInstance = new Singelton3();
         return anInstance;
     }
 }

@@ -7,11 +7,9 @@ import com.isatimur.ocp.package_1.cat.BigCat;
  */
 public class Lynx extends BigCat {
 
-
     Lynx(String name, boolean hasFur, boolean hasPaws, long id) {
         super(name, hasFur, hasPaws, id);
     }
-
 
     public static void main(String[] args) {
         Lynx cat = new Lynx("Test Lynx", false, false, 02);

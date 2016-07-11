@@ -1,7 +1,7 @@
 package com.isatimur.ocp.nio;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileWriter;
@@ -10,6 +10,12 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  * Created by tisachenko on 16.04.16.
@@ -80,17 +86,17 @@ public class NewFlashCard implements ActionListener {
             if (Files.notExists(path.getParent())) {
                 Files.createDirectories(path.getParent());
             }
-            if(!Files.exists(path))
-            Files.createFile(path);
+            if (!Files.exists(path))
+                Files.createFile(path);
             PrintWriter pw = new PrintWriter(new FileWriter(path.toFile()));
             pw.println(note.getText());
             pw.flush();
 
 //            Files.write(Files.createFile(path), note.getText().getBytes());
-        } catch (IOException e1) {
+        }
+        catch (IOException e1) {
             JOptionPane.showMessageDialog(frame, e1.toString());
         }
-
 
     }
 }

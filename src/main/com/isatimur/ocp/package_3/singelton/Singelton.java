@@ -11,7 +11,8 @@ public class Singelton {
     }
 
     public static Singelton getInstance() {
-        if (INSTANCE == null) INSTANCE = new Singelton();
+        if (INSTANCE == null)
+            INSTANCE = new Singelton();
         return INSTANCE;
     }
 

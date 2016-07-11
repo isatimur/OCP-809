@@ -21,7 +21,6 @@ public class LoadTesting {
 
 }
 
-
 class Request {
     @Override
     public String toString() {
@@ -45,7 +44,8 @@ class Client implements Runnable {
                 queue.put(request);
                 System.out.println("added request: " + request);
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println(e);
         }
 
@@ -66,7 +66,8 @@ class Server implements Runnable {
             while (true) {
                 System.out.println("processing .. " + queue.take());
             }
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e) {
             System.out.println(e);
         }
     }

@@ -22,9 +22,11 @@ class MultiAndSingleCatch {
             File file = new File(fileName);
             FileInputStream inputStream = new FileInputStream(file);
             Statement statement = con.createStatement();
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e) {
             System.out.println("single catch " + e.toString());
-        } catch (IOException | SQLException e) {
+        }
+        catch (IOException | SQLException e) {
             System.out.println("multiple catch " + e.toString());
         }
 

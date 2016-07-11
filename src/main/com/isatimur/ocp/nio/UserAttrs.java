@@ -26,7 +26,8 @@ public class UserAttrs {
     static void writeAttr(UserDefinedFileAttributeView view, String attr, boolean value) throws IOException {
         if (value) {
             view.write(attr, Charset.defaultCharset().encode("true"));
-        } else {
+        }
+        else {
             view.write(attr, Charset.defaultCharset().encode("false"));
         }
 

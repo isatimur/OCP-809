@@ -11,7 +11,6 @@ public class BoxPrinterTest {
         BoxPrinter<String> boxPrinterText = new BoxPrinter<>("Hello world");
         System.out.println(boxPrinterText);
 
-
     }
 }
 

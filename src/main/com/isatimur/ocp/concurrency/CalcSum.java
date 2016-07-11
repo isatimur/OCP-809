@@ -41,7 +41,8 @@ public class CalcSum extends RecursiveTask<Integer> {
         final int currentSize = endPos - startPos;
         if (currentSize <= UNIT_SIZE) {
             return computeSum();
-        } else {
+        }
+        else {
             int center = currentSize / 2;
             int leftEnd = startPos + center;
             CalcSum leftSum = new CalcSum(values, startPos, leftEnd);

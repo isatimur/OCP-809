@@ -7,9 +7,12 @@ public class TestVariableInput {
     public static void main(String[] args) {
         try {
             int a = 10;
-            if (a <= 10) throw new Exception1();
-            else throw new Exception2();
-        } catch (Exception1 | Exception2 e) {
+            if (a <= 10)
+                throw new Exception1();
+            else
+                throw new Exception2();
+        }
+        catch (Exception1 | Exception2 e) {
 //            System.out.println(e.info); will not compile because common exception is of Exception type
         }
     }

@@ -1,7 +1,6 @@
 package com.isatimur.ocp.package_3.dao.step2;
 
 import com.isatimur.ocp.package_2.ocp.enums.A;
-
 import java.util.Collection;
 
 /**

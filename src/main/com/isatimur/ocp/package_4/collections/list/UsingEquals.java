@@ -21,7 +21,6 @@ public class UsingEquals {
 
     }
 
-
 }
 
 class Emp {
@@ -35,9 +34,10 @@ class Emp {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (this == o)
+            return true;
         if (o == null || o instanceof Emp) {
-            Emp emp = (Emp) o;
+            Emp emp = (Emp)o;
             if (emp.id == this.id && emp.name.equals(this.name)) {
                 return true;
             }

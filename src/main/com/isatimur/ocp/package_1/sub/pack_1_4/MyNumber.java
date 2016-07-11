@@ -38,7 +38,7 @@ public class MyNumber {
 
     public boolean equals(Object o) {
         if (o != null && o instanceof MyNumber)
-            return (primary == ((MyNumber) o).primary);
+            return (primary == ((MyNumber)o).primary);
         else
             return false;
     }
@@ -56,12 +56,12 @@ class AnotherNumber {
     }
 
     public int hashCode() {
-        return (int) (Math.random() * 100);
+        return (int)(Math.random() * 100);
     }
 
     public boolean equals(Object o) {
         if (o != null && o instanceof AnotherNumber)
-            return (primary == ((AnotherNumber) o).primary);
+            return (primary == ((AnotherNumber)o).primary);
         else
             return false;
     }

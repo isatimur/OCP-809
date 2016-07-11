@@ -5,16 +5,6 @@ package com.isatimur.ocp.lambda;
  */
 @FunctionalInterface
 public interface Predicate<T> {
-    boolean test(T t);
-
-    default Predicate<T> or(Predicate<T> other) {
-        return t -> test(t) || other.test(t);
-    }
-
-    default Predicate<T> and(Predicate<T> other) {
-        return t -> test(t) && other.test(t);
-    }
-
     public static void main(String[] args) {
         Predicate<String> p1 = s -> s.length() < 20;
         Predicate<String> p2 = s -> s.length() > 5;
@@ -26,7 +16,6 @@ public interface Predicate<T> {
         System.out.println("P3 for Yes: " + p3.test("Yes"));
         System.out.println("P3 for Good morning: " + p3.test("Good morning"));
         System.out.println("P3 for Good morning gentelmen: " + p3.test("Good morning gentelmen"));
-
 
         Predicate<String> p4 = p1.or(p2);
 
@@ -47,5 +36,14 @@ public interface Predicate<T> {
         return s -> s.equals(text);
     }
 
+    boolean test(T t);
+
+    default Predicate<T> or(Predicate<T> other) {
+        return t -> test(t) || other.test(t);
+    }
+
+    default Predicate<T> and(Predicate<T> other) {
+        return t -> test(t) && other.test(t);
+    }
 
 }

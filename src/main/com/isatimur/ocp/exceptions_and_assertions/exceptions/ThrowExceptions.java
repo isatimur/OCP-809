@@ -25,34 +25,39 @@ class ThrowExceptions {
 class HandleExceptions {
     void method6() {
         try {
-        } catch (Error e) {
+        }
+        catch (Error e) {
         }
     }
 
     void method7() {
         try {
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
         }
     }
 
     void method8() {
         try {
-        } catch (Throwable e) {
+        }
+        catch (Throwable e) {
         }
     }
 
     void method9() {
         try {
-        } catch (RuntimeException e) {
+        }
+        catch (RuntimeException e) {
         }
     }
 
     void method10() {
         try {
-        } catch (Exception e
+        }
+        catch (Exception e
             //FileNotFoundException e will not compile  But a try block can’t define a catch
 //        block for a checked exception (other than Exception )
-                ) {
+            ) {
         }
     }
 }

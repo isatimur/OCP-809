@@ -1,6 +1,11 @@
 package com.isatimur.ocp.io;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 /**
  * Created by tisachenko on 07.04.16.
@@ -18,9 +23,8 @@ public class ReadWriteObject {
 
             oos.flush();
 
-            Car car2 = (Car) ois.readObject();
+            Car car2 = (Car)ois.readObject();
             System.out.println(car2.getName() + " " + car2.getAge());
-
 
         }
     }

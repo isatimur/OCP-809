@@ -23,8 +23,8 @@ enum IceCream {
     @Override
     public String toString() {
         return "IceCream{" +
-                "color='" + color + '\'' +
-                '}';
+            "color='" + color + '\'' +
+            '}';
     }
     //    VANILLA, STRAWBERRY, WALNUT, CHOCOLATE;
 //    private String color;

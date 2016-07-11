@@ -37,7 +37,6 @@ public class SortList {
             System.out.println(star.toString());
         }
 
-
     }
 
 }
@@ -54,14 +53,14 @@ class Star implements Comparable<Star> {
 
     @Override
     public int compareTo(Star o) {
-        return (int) (this.mass - o.mass);
+        return (int)(this.mass - o.mass);
     }
 
     @Override
     public String toString() {
         return "Star{" +
-                "name='" + name + '\'' +
-                ", mass=" + mass +
-                '}';
+            "name='" + name + '\'' +
+            ", mass=" + mass +
+            '}';
     }
 }

@@ -18,6 +18,5 @@ public class Twist4_3_RemoveArrayListsElements {
 //        list.remove(20);
         System.out.println(list.size());
 
-
     }
 }

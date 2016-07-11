@@ -11,14 +11,14 @@ public class MyBook {
     Object objPos = new Object();
 
     public void newSale() {
-        synchronized (objSale){
+        synchronized (objSale) {
             ++copiesSold;
         }
 
     }
 
-    public void rankImprove(){
-        synchronized (objPos){
+    public void rankImprove() {
+        synchronized (objPos) {
             --rank;
         }
     }

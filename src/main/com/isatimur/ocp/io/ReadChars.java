@@ -10,8 +10,8 @@ import java.io.IOException;
 public class ReadChars {
     public static void main(String[] args) throws IOException {
         try (
-                FileReader input = new FileReader("ReadChars.java");
-                FileWriter output = new FileWriter("CopyReadChars.java");
+            FileReader input = new FileReader("ReadChars.java");
+            FileWriter output = new FileWriter("CopyReadChars.java");
         ) {
             int data;
 
