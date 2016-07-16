@@ -9,7 +9,9 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 import static java.time.temporal.ChronoUnit.MINUTES;
@@ -141,5 +143,73 @@ public class DateTimeAPI {
         for (ChronoUnit unit : ChronoUnit.values()) {
             System.out.printf("%20s \t %b  \t\t %b  \t\t %s %n", unit, unit.isDateBased(), unit.isTimeBased(), unit.getDuration());
         }
+
+        System.out.println("========================ZoneId============================");
+
+        System.out.println("My Zone id is: " + ZoneId.systemDefault());
+
+        LocalDate currentDate = LocalDate.now();
+        LocalTime currentTimeNow = LocalTime.now();
+        ZoneId myZone = ZoneId.systemDefault();
+
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(currDate, currentTimeNow, myZone);
+        System.out.println(zonedDateTime);
+
+        ZoneOffset zoneOffset = zonedDateTime.getOffset();
+        System.out.println(zoneOffset);
+
+        ZoneId singapooreZone = ZoneId.of("Asia/Singapore");
+        ZonedDateTime dateTimeInSingapore = ZonedDateTime.of(LocalDateTime.of(2016, Month.JANUARY, 1, 6, 0), singapooreZone);
+
+        ZoneId aucklandZone = ZoneId.of("Pacific/Auckland");
+        ZonedDateTime sameDateTimeInSingapore = dateTimeInSingapore.withZoneSameInstant(aucklandZone);
+
+        Duration timeDifference = Duration.between(dateTimeInSingapore.toLocalTime(), sameDateTimeInSingapore.toLocalTime());
+
+        System.out.printf(
+            "Time difference between %s and %s zones is %d hours %n", singapooreZone, aucklandZone, timeDifference.toHours());
+
+        System.out.println("======================DateTimeFormatter=====================");
+
+        LocalTime wakeupTime = LocalTime.of(6, 20, 59);
+        System.out.println("Wake up time: " + DateTimeFormatter.ISO_TIME.format(wakeupTime));
+
+        DateTimeFormatter customFormatter = DateTimeFormatter.ofPattern("dd MM yyyy");
+        System.out.println(customFormatter.format(LocalDate.of(2016, Month.JANUARY, 01)));
+
+        String[] dateTimeFormatters = {
+            "dd-MM-yyyy",/*d is day in month, M is month, y is year */
+            "d '('E')' MMM, YYYY", /*E is name of the day(in week), Y is year*/
+            "w'th week of' YYYY",/*w is the week of year*/
+            "EEEE, dd'th' MMMM,YYYY" /*E is day name in the week*/
+        };
+
+        LocalDateTime noww = LocalDateTime.now();
+        for (String dateTimeFormat : dateTimeFormatters) {
+            System.out.printf("Pattern \"%s\" is %s %n", dateTimeFormat, DateTimeFormatter.ofPattern(dateTimeFormat).format(noww));
+        }
+        System.out.println("-------------------------------------------------------------");
+
+        String[] timeFormatters = {
+            "h:mm",
+            "hh 'o''clock'",
+            "H:mm a",
+            "hh:mm:ss:SS",
+            "K:mm:ss a"
+        };
+
+        LocalTime timeNoww = LocalTime.now();
+        for (String timeFormats : timeFormatters) {
+            System.out.printf("Pattern \"%s\" is %s %n", timeFormats, DateTimeFormatter.ofPattern(timeFormats).format(timeNoww));
+        }
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd MMM yyyy hh.mm a");
+
+        ZonedDateTime depature = ZonedDateTime.of(LocalDateTime.of(2016, Month.JANUARY, 1, 6, 0), ZoneId.of("Asia/Singapore"));
+        System.out.println("Departure: " + dateTimeFormatter.format(depature));
+
+        ZonedDateTime arrival = depature.withZoneSameInstant(ZoneId.of("Pacific/Auckland")).plusHours(10);
+        System.out.println("Arrival: " + dateTimeFormatter.format(arrival));
+
     }
 }
