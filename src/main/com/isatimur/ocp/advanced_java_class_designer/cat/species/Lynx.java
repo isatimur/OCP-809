@@ -1,6 +1,6 @@
-package com.isatimur.ocp.package_1.cat.species;
+package com.isatimur.ocp.advanced_java_class_designer.cat.species;
 
-import com.isatimur.ocp.package_1.cat.BigCat;
+import com.isatimur.ocp.advanced_java_class_designer.cat.BigCat;
 
 /**
  * Created by tisachenko on 22.02.16.
