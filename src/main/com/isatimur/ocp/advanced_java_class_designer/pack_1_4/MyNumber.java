@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_1.sub.pack_1_4;
+package com.isatimur.ocp.advanced_java_class_designer.pack_1_4;
 
 import java.util.HashMap;
 import java.util.Map;
