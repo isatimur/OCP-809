@@ -1,13 +1,21 @@
-package com.isatimur.ocp.package_3.different_package;
-
-import com.isatimur.ocp.package_3.MyInterfaces;
-import java.util.List;
-import java.util.stream.Stream;
+package com.isatimur.ocp.package_3;
 
 /**
  * Created by tisachenko on 29.02.16.
  */
-public class TestDefaultInterface {
+public interface MyInterfaces {
+    interface interface2 {
+
+    }
+
+    public interface interface4 {
+    }
+
+    static interface MyInterface1 {
+    }
+}
+
+class ReviewInterfaces2 {
     public static void main(String[] args) {
         MyInterfaces interfaces = new MyInterfaces() {
             @Override
@@ -28,19 +36,9 @@ public class TestDefaultInterface {
             }
         };
 
-        MyInterfaces.MyInterface1 myInterface1 = new MyInterfaces.MyInterface1() {
-            @Override
-            public String toString() {
-                return "myInterface1";
-            }
-        };
-
         System.out.println(interfaces);
         System.out.println(interface2);
         System.out.println(interface4);
-        System.out.println(myInterface1);
-        Stream stream = Stream.empty();
-        List list;
 
     }
 }
