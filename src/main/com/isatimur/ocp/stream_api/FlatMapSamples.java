@@ -1,10 +1,11 @@
 package com.isatimur.ocp.stream_api;
 
 import java.io.IOException;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.function.Function;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -22,23 +23,23 @@ public class FlatMapSamples {
         ) {
 //            Stream<String> s10 = Stream.concat(s1, s2);
 
-
 //            s10.forEach(System.out::println);
             Function<String, Stream<String>> splitIntoWords =
 //                    line -> Stream.of(line.split(" "));
-                    line -> Pattern.compile(" ").splitAsStream(line);
+                line -> Pattern.compile(" ").splitAsStream(line);
             Stream<Stream<String>> s = Stream.of(s1, s2, s3);
             Stream<String> streamOfWords = s.flatMap(Function.identity())
-                    .flatMap(splitIntoWords)
-                    .map(w -> w.toLowerCase())
-                    .distinct()
-                    .filter(w->w.length()==4)
+                .flatMap(splitIntoWords)
+                .map(w -> w.toLowerCase())
+                .distinct()
+                .filter(w -> w.length() == 4)
 //                    .peek(System.out::println)
 //                    .collect(Collectors.toSet())
-                    ;
+                ;
             System.out.println(streamOfWords.count());
 
-        } catch (IOException exc) {
+        }
+        catch (IOException exc) {
             exc.printStackTrace();
         }
     }

@@ -4,12 +4,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.OptionalDouble;
+import java.util.Spliterator;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.Future;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
@@ -35,7 +33,6 @@ public class PerformanceBattles {
 
         System.out.println(System.currentTimeMillis() - currentTime);
 
-
         Path filePath = Paths.get("people.txt");
 
         try (Stream<String> lines = Files.lines(filePath);) {
@@ -45,15 +42,15 @@ public class PerformanceBattles {
 
             Stream<Person> people = StreamSupport.stream(peopleSpliterator, false);
 
-
             ForkJoinPool fjp = new ForkJoinPool(2);
             OptionalDouble optionalDouble = fjp.submit(() ->
-                    people.parallel().mapToInt(p -> p.getAge()).filter(age -> age > 27).average()
+                people.parallel().mapToInt(p -> p.getAge()).filter(age -> age > 27).average()
             ).get();
             System.out.println(optionalDouble);
 //            people.forEach(System.out::println);
 
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
 

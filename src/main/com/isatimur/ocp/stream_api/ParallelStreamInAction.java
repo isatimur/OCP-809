@@ -1,6 +1,5 @@
 package com.isatimur.ocp.stream_api;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
@@ -16,10 +15,10 @@ public class ParallelStreamInAction {
         List<String> stringList = new CopyOnWriteArrayList<>();
 
         List<String> collect = Stream.iterate("+", s -> s + "+")
-                .parallel()
-                .limit(1000)
+            .parallel()
+            .limit(1000)
 //                .peek(s -> System.out.println(s + "processed in the thread " + Thread.currentThread().getName()))
-                .collect(Collectors.toList());
-        System.out.println("! "+ collect.size());
+            .collect(Collectors.toList());
+        System.out.println("! " + collect.size());
     }
 }

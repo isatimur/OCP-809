@@ -24,11 +24,11 @@ public class SpliteratorAPI {
 
             people.forEach(System.out::println);
 
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 
 }
 
@@ -73,9 +73,9 @@ class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", city='" + city + '\'' +
-                '}';
+            "name='" + name + '\'' +
+            ", age=" + age +
+            ", city='" + city + '\'' +
+            '}';
     }
 }

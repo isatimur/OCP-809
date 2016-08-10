@@ -17,10 +17,12 @@ public class Card {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || !(o instanceof Card)) return false;
+        if (this == o)
+            return true;
+        if (o == null || !(o instanceof Card))
+            return false;
 
-        Card card = (Card) o;
+        Card card = (Card)o;
 
         return rank.equals(card.rank) && suit.equals(card.suit);
 
