@@ -1,6 +1,7 @@
 package com.isatimur.ocp.datetime;
 
 import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -14,7 +15,7 @@ import java.time.temporal.ChronoUnit;
  * Created by developer on 8/13/16.
  */
 public class OCPDateTimeApi {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         LocalDate date1 = LocalDate.of(2015, Month.JANUARY, 20);
         LocalDate date2 = LocalDate.of(2015, 0_1, 20);
         System.out.println(date1 + " : " + date2);
@@ -100,6 +101,82 @@ public class OCPDateTimeApi {
         System.out.println(ChronoUnit.HOURS.between(one, two)); //TRUNCATE MINUTES
         System.out.println(ChronoUnit.MINUTES.between(one, two)); //75 IN MINUTES WORKING NICE
         //System.out.println(ChronoUnit.MINUTES.between(one,date));//DateTimeException
+
+        System.out.println("===============================================");
+
+        System.out.println("=================Instant==================");
+
+        Instant now = Instant.now();
+        System.out.println(now);
+        Thread.sleep(2000);
+
+        Instant later = Instant.now();
+        System.out.println(later);
+
+        Duration duration = Duration.between(now, later);
+        System.out.println(duration.toMillis());
+        System.out.println(duration.toString());
+
+        System.out.println();
+
+        LocalDate localDate1 = LocalDate.of(2016, 5, 25);
+        LocalTime localTime1 = LocalTime.of(11, 55, 00);
+        ZoneId zoneId = ZoneId.of("US/Eastern");
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(localDate1, localTime1, zoneId);
+        Instant instant = zonedDateTime.toInstant();
+        System.out.println(zonedDateTime);
+        System.out.println(instant);
+        System.out.println("===============================================");
+        Instant instant1 = Instant.ofEpochSecond(1451606400);
+        System.out.println(instant1);
+        System.out.println("===============================================");
+        Instant nextDay = instant1.plus(1, ChronoUnit.DAYS);
+        System.out.println(nextDay);
+        Instant nextHour = instant1.plus(1, ChronoUnit.HOURS);
+        System.out.println(nextHour);
+//        Instant nextWeek = instant1.plus(1,ChronoUnit.WEEKS); only smaller than day
+        System.out.println("===============================================");
+        System.out.println("================Let's save daylight===============");
+
+        System.out.println("========March - 13 - 1:30 jump to 3:30");
+        LocalDate localDate2 = LocalDate.of(2016, Month.MARCH, 13);
+        LocalTime localTime2 = LocalTime.of(1, 30);
+        ZoneId zoneId1 = ZoneId.of("US/Eastern");
+        ZonedDateTime zonedDateTime22 = ZonedDateTime.of(localDate2, localTime2, zoneId1);
+        System.out.println(zonedDateTime22);
+
+        zonedDateTime22 = zonedDateTime22.plusHours(1);
+        System.out.println(zonedDateTime22);
+
+        System.out.println();
+//
+//        LocalDate localDate3 = LocalDate.of(2016, Month.APRIL, 24);
+//        LocalTime localTime3 = LocalTime.of(1, 00);
+//        ZoneId zoneId2 = ZoneId.of("Asia/Magadan");
+//        ZonedDateTime zonedDateTime21 = ZonedDateTime.of(localDate3, localTime3, zoneId2);
+//        System.out.println(zonedDateTime21);
+//
+//        zonedDateTime21 = zonedDateTime21.plusHours(1);
+//        System.out.println(zonedDateTime21);
+
+        System.out.println("========November - 6 - 1:30 twice");
+        LocalDate localDate3 = LocalDate.of(2016, Month.NOVEMBER, 6);
+        LocalTime localTime3 = LocalTime.of(1, 30);
+        ZoneId zoneId2 = ZoneId.of("US/Eastern");
+        ZonedDateTime zonedDateTime21 = ZonedDateTime.of(localDate3, localTime3, zoneId2);
+        System.out.println(zonedDateTime21);
+        zonedDateTime21 = zonedDateTime21.plusHours(1);
+        System.out.println(zonedDateTime21);
+        zonedDateTime21 = zonedDateTime21.plusHours(1);
+        System.out.println(zonedDateTime21);
+        System.out.println();
+        System.out.println("========March - 13 - 2:30 replaced with 3:30");
+        LocalDate localDate4 = LocalDate.of(2016, Month.MARCH, 13);
+        LocalTime localTime4 = LocalTime.of(2, 30);
+        ZoneId zoneId3 = ZoneId.of("US/Eastern");
+        ZonedDateTime zonedDateTime20 = ZonedDateTime.of(localDate4, localTime4, zoneId3);
+        System.out.println(zonedDateTime20);
+
 
         System.out.println("===============================================");
 
