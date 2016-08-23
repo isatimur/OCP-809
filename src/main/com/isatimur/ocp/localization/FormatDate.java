@@ -29,6 +29,7 @@ public class FormatDate {
             specificLocale(Locale.GERMANY, date, dformat);
             specificLocale(Locale.FRANCE, date, dformat);
             specificLocale(Locale.CHINA, date, dformat);
+            specificLocale(Locale.forLanguageTag("ru"), date, dformat);
 
         }
 
