@@ -5,7 +5,7 @@ import java.text.ParseException;
 import java.util.Locale;
 
 /**
- * Created by developer on 8/16/16.
+ * Created by Isa Timur on 8/16/16.
  */
 public class NumberFormatSamples {
     public static void main(String[] args) throws ParseException {

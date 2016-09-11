@@ -1,7 +1,7 @@
 package com.isatimur.ocp.threads;
 
 /**
- * Created by developer on 7/19/16.
+ * Created by Isa Timur on 7/19/16.
  */
 
 //DEADLOCK

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.stream.Collector;
 
 /**
- * Created by developer on 7/12/16.
+ * Created by Isa Timur on 7/12/16.
  */
 public class CustomCollectors {
     public static void main(String[] args) {

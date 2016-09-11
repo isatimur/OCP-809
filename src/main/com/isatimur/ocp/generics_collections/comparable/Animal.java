@@ -1,7 +1,7 @@
 package com.isatimur.ocp.generics_collections.comparable;
 
 /**
- * Created by developer on 8/8/16.
+ * Created by Isa Timur on 8/8/16.
  */
 public class Animal implements java.lang.Comparable<Animal> {
     private int id;

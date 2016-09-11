@@ -1,7 +1,7 @@
 package com.isatimur.ocp.concurrency;
 
 /**
- * Created by developer on 6/12/16.
+ * Created by Isa Timur on 6/12/16.
  */
 public class Reminder implements Runnable {
     @Override

@@ -17,7 +17,7 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
 /**
- * Created by developer on 8/12/16.
+ * Created by Isa Timur on 8/12/16.
  */
 public class CollectingToMap {
 

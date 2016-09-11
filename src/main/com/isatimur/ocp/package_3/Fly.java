@@ -1,7 +1,7 @@
 package com.isatimur.ocp.package_3;
 
 /**
- * Created by developer on 7/23/16.
+ * Created by Isa Timur on 7/23/16.
  */
 public interface Fly {
     public final static int MAX_SPEED = 100;

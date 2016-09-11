@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.concurrent.Callable;
 
 /**
- * Created by developer on 8/24/16.
+ * Created by Isa Timur on 8/24/16.
  */
 public class AmbiguousLambdaSample {
     public static void useSupplier(Supplier<Integer> expression) {

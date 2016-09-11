@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * Created by developer on 6/25/16.
+ * Created by Isa Timur on 6/25/16.
  */
 public class IndianArt {
     JFrame f = new JFrame("BookNow");

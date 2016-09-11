@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Created by developer on 6/29/16.
+ * Created by Isa Timur on 6/29/16.
  */
 public class FormatSimpleDate {
     public static void main(String[] args) {

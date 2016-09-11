@@ -7,7 +7,7 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
- * Created by developer on 8/11/16.
+ * Created by Isa Timur on 8/11/16.
  */
 public class PrimitiveStreamsExample {
     public static void main(String[] args) {

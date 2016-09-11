@@ -3,7 +3,7 @@ package com.isatimur.ocp.lambda.functional_interfaces;
 import java.time.LocalDate;
 
 /**
- * Created by developer on 8/9/16.
+ * Created by Isa Timur on 8/9/16.
  */
 @FunctionalInterface
 public interface Supplier<T> {

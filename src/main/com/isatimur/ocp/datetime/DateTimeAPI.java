@@ -17,7 +17,7 @@ import java.time.temporal.ChronoUnit;
 import static java.time.temporal.ChronoUnit.MINUTES;
 
 /**
- * Created by developer on 7/14/16.
+ * Created by Isa Timur on 7/14/16.
  */
 public class DateTimeAPI {
     public static void main(String[] args) {

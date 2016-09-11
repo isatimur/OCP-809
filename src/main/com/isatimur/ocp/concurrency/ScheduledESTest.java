@@ -8,7 +8,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by developer on 8/24/16.
+ * Created by Isa Timur on 8/24/16.
  */
 public class ScheduledESTest {
     public static void main(String[] args) throws ExecutionException, InterruptedException {

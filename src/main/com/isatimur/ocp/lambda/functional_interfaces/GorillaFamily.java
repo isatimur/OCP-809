@@ -5,7 +5,7 @@ interface Gorrila {
 }
 
 /**
- * Created by developer on 8/9/16.
+ * Created by Isa Timur on 8/9/16.
  */
 public class GorillaFamily {
     String walk = "walk";

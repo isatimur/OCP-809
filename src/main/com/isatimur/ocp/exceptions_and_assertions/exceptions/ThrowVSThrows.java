@@ -3,7 +3,7 @@ package com.isatimur.ocp.exceptions_and_assertions.exceptions;
 import java.sql.SQLException;
 
 /**
- * Created by developer on 8/21/16.
+ * Created by Isa Timur on 8/21/16.
  */
 public class ThrowVSThrows {
     public static void main(String[] args) {

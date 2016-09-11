@@ -3,7 +3,7 @@ package com.isatimur.ocp.lambda.optional;
 import java.util.Optional;
 
 /**
- * Created by developer on 8/10/16.
+ * Created by Isa Timur on 8/10/16.
  */
 public class JavaClassScores {
     public static void main(String[] args) throws Throwable {

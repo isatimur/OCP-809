@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.function.BinaryOperator;
 
 /**
- * Created by developer on 7/9/16.
+ * Created by Isa Timur on 7/9/16.
  */
 public class ReductionExamples {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ import java.util.List;
 import static java.util.Comparator.comparing;
 
 /**
- * Created by developer on 7/8/16.
+ * Created by Isa Timur on 7/8/16.
  */
 public class DataProcessingWithCollection {
     public static void main(String[] args) {

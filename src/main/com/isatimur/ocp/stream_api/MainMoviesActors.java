@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Created by developer on 7/12/16.
+ * Created by Isa Timur on 7/12/16.
  */
 public class MainMoviesActors {
     public static void main(String[] args) throws IOException {

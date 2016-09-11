@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.function.BiFunction;
 
 /**
- * Created by developer on 8/8/16.
+ * Created by Isa Timur on 8/8/16.
  */
 public class NewMapAPI {
     public static void main(String[] args) {

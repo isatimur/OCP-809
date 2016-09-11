@@ -10,7 +10,7 @@ import static java.text.DateFormat.MEDIUM;
 import static java.text.DateFormat.SHORT;
 
 /**
- * Created by developer on 6/29/16.
+ * Created by Isa Timur on 6/29/16.
  */
 public class FormatDate {
     static int[] styles = new int[] {SHORT, MEDIUM, LONG, FULL};

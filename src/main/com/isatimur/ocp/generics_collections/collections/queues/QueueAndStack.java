@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.LinkedList;
 
 /**
- * Created by developer on 8/7/16.
+ * Created by Isa Timur on 8/7/16.
  */
 public class QueueAndStack {
     public static void main(String[] args) {

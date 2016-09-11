@@ -12,10 +12,8 @@ import java.io.IOException;
 public class BufferedReaderWriter {
     public static void main(String[] args) throws IOException {
         try (
-            FileReader fr = new FileReader("BufferedReaderWriter.java");
-            BufferedReader br = new BufferedReader(fr);
-            FileWriter fw = new FileWriter("CopyFromBuffRW.java");
-            BufferedWriter bw = new BufferedWriter(fw);
+            BufferedReader br = new BufferedReader(new FileReader("BufferedReaderWriter.java"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("CopyFromBuffRW.java"));
 
         ) {
             String line = null;

@@ -18,7 +18,7 @@ enum Metal {
 }
 
 /**
- * Created by developer on 7/19/16.
+ * Created by Isa Timur on 7/19/16.
  */
 public class EnumTypes {
     public static void main(String args[]) {

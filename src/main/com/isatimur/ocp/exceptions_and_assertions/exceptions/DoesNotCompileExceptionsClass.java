@@ -7,7 +7,7 @@ import java.util.InputMismatchException;
 import java.util.MissingResourceException;
 
 /**
- * Created by developer on 8/21/16.
+ * Created by Isa Timur on 8/21/16.
  */
 public class DoesNotCompileExceptionsClass {
     public static void main(String[] args) {

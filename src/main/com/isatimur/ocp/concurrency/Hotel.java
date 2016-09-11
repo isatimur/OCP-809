@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by developer on 6/11/16.
+ * Created by Isa Timur on 6/11/16.
  */
 public class Hotel {
     ExecutorService service = Executors.newFixedThreadPool(5);

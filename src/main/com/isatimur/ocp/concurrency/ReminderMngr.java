@@ -5,7 +5,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by developer on 6/12/16.
+ * Created by Isa Timur on 6/12/16.
  */
 public class ReminderMngr {
 

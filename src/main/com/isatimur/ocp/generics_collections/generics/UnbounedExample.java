@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by developer on 8/6/16.
+ * Created by Isa Timur on 8/6/16.
  */
 //Unbounded wildcard represents any data type! Use ? symbol to expose your intension to compiler.
 public class UnbounedExample {

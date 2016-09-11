@@ -1,7 +1,7 @@
 package com.isatimur.ocp.stream_api.model;
 
 /**
- * Created by developer on 7/12/16.
+ * Created by Isa Timur on 7/12/16.
  */
 public class Actor {
     public String lastName, firstName;

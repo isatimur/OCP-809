@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 /**
- * Created by developer on 6/29/16.
+ * Created by Isa Timur on 6/29/16.
  */
 public class FormatCurrencyVer2 {
     static JTextArea textArea = new JTextArea();

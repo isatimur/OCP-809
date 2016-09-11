@@ -5,7 +5,7 @@ interface CheckTrait {
 }
 
 /**
- * Created by developer on 7/23/16.
+ * Created by Isa Timur on 7/23/16.
  */
 public class FindMatchingAnimals {
     public static void main(String[] args) {

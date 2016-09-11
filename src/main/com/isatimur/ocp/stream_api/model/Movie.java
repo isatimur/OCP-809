@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by developer on 7/12/16.
+ * Created by Isa Timur on 7/12/16.
  */
 public class Movie {
     private String title;

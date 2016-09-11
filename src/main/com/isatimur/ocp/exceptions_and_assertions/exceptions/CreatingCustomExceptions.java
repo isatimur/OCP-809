@@ -1,7 +1,7 @@
 package com.isatimur.ocp.exceptions_and_assertions.exceptions;
 
 /**
- * Created by developer on 8/21/16.
+ * Created by Isa Timur on 8/21/16.
  */
 public class CreatingCustomExceptions {
     public static void main(String[] args) throws CannotSwimException {

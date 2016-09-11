@@ -1,7 +1,7 @@
 package com.isatimur.ocp.exceptions_and_assertions.assertions;
 
 /**
- * Created by developer on 8/22/16.
+ * Created by Isa Timur on 8/22/16.
  */
 public class Rectangle {
     private int width, height;

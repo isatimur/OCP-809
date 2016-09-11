@@ -3,7 +3,7 @@ package com.isatimur.ocp.localization;
 import java.util.ListResourceBundle;
 
 /**
- * Created by developer on 6/27/16.
+ * Created by Isa Timur on 6/27/16.
  */
 public class IndianArtLabelsBundle extends ListResourceBundle {
     protected Object[][] getContents() {

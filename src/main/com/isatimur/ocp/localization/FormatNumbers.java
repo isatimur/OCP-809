@@ -4,7 +4,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 /**
- * Created by developer on 6/29/16.
+ * Created by Isa Timur on 6/29/16.
  */
 public class FormatNumbers {
     public static void main(String[] args) {

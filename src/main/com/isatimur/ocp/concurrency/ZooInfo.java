@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by developer on 8/24/16.
+ * Created by Isa Timur on 8/24/16.
  */
 public class ZooInfo {
     public static void main(String[] args) {

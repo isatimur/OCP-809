@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.groupingBy;
 
 /**
- * Created by developer on 7/12/16.
+ * Created by Isa Timur on 7/12/16.
  */
 public class MainUsingCollectors {
 

@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
 /**
- * Created by developer on 8/18/16.
+ * Created by Isa Timur on 8/18/16.
  */
 public class DateFormatSample {
     public static void main(String[] args) {

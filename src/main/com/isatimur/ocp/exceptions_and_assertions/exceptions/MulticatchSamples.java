@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
 /**
- * Created by developer on 8/21/16.
+ * Created by Isa Timur on 8/21/16.
  */
 public class MulticatchSamples {
     public static void main(String[] args) {

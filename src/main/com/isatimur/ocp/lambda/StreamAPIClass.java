@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * Created by developer on 7/9/16.
+ * Created by Isa Timur on 7/9/16.
  */
 public class StreamAPIClass {
     public static void main(String[] args) {

@@ -4,7 +4,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * Created by developer on 6/12/16.
+ * Created by Isa Timur on 6/12/16.
  */
 public class CalcSum extends RecursiveTask<Integer> {
 

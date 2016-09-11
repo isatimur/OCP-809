@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * Created by developer on 8/9/16.
+ * Created by Isa Timur on 8/9/16.
  */
 public class TestQuestion10 {
     public static void main(String[] args) {

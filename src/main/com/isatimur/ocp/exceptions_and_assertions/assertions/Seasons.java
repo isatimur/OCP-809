@@ -3,7 +3,7 @@ package com.isatimur.ocp.exceptions_and_assertions.assertions;
 import static com.isatimur.ocp.exceptions_and_assertions.assertions.TestSeasons.test;
 
 /**
- * Created by developer on 8/22/16.
+ * Created by Isa Timur on 8/22/16.
  */
 public enum Seasons {
     WINTER, SPRING, SUMMER, FALL;

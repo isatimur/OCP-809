@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.TreeSet;
 
 /**
- * Created by developer on 7/19/16.
+ * Created by Isa Timur on 7/19/16.
  */
 public class TestQuestion41 {
     public static void main(String args[]) {

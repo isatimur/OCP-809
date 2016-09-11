@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * Created by developer on 8/13/16.
+ * Created by Isa Timur on 8/13/16.
  */
 public class TestsFromEbook {
     public static void main(String[] args) {

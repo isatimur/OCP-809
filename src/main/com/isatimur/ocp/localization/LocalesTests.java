@@ -3,7 +3,7 @@ package com.isatimur.ocp.localization;
 import java.util.Locale;
 
 /**
- * Created by developer on 6/24/16.
+ * Created by Isa Timur on 6/24/16.
  */
 public class LocalesTests {
     public static void main(String[] args) {

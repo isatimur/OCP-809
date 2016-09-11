@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by developer on 8/8/16.
+ * Created by Isa Timur on 8/8/16.
  */
 public class Duck implements Comparable<Duck> {
     private String name;

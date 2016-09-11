@@ -1,7 +1,7 @@
 package com.isatimur.ocp.concurrency;
 
 /**
- * Created by developer on 8/23/16.
+ * Created by Isa Timur on 8/23/16.
  */
 public class CheckResults {
     private static int counter = 0;

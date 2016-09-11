@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by developer on 7/28/16.
+ * Created by Isa Timur on 7/28/16.
  */
 public final class ImmutableAnimal {
     private final String species;

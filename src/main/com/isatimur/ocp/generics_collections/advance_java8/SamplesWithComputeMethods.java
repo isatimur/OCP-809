@@ -6,7 +6,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
- * Created by developer on 8/9/16.
+ * Created by Isa Timur on 8/9/16.
  */
 public class SamplesWithComputeMethods {
     public static void main(String[] args) {

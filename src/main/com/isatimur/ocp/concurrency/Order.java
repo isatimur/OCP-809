@@ -3,7 +3,7 @@ package com.isatimur.ocp.concurrency;
 import java.util.concurrent.Callable;
 
 /**
- * Created by developer on 6/11/16.
+ * Created by Isa Timur on 6/11/16.
  */
 public class Order implements Callable<Void> {
     private String name;

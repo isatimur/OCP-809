@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 
 /**
- * Created by developer on 8/13/16.
+ * Created by Isa Timur on 8/13/16.
  */
 public class OCPDateTimeApi {
     public static void main(String[] args) throws InterruptedException {
@@ -176,7 +176,6 @@ public class OCPDateTimeApi {
         ZoneId zoneId3 = ZoneId.of("US/Eastern");
         ZonedDateTime zonedDateTime20 = ZonedDateTime.of(localDate4, localTime4, zoneId3);
         System.out.println(zonedDateTime20);
-
 
         System.out.println("===============================================");
 

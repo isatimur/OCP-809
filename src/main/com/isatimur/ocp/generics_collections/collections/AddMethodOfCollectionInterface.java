@@ -9,7 +9,7 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- * Created by developer on 8/6/16.
+ * Created by Isa Timur on 8/6/16.
  */
 public class AddMethodOfCollectionInterface {
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ package com.isatimur.ocp.concurrency;
 import java.util.Arrays;
 
 /**
- * Created by developer on 8/23/16.
+ * Created by Isa Timur on 8/23/16.
  */
 public class CalculateAverages implements Runnable {
     private double[] scores;

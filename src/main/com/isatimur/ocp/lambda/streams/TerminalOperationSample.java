@@ -4,7 +4,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 /**
- * Created by developer on 8/10/16.
+ * Created by Isa Timur on 8/10/16.
  */
 public class TerminalOperationSample {
     public static void main(String[] args) {

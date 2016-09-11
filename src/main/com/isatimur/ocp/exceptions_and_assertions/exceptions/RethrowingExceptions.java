@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.time.format.DateTimeParseException;
 
 /**
- * Created by developer on 8/22/16.
+ * Created by Isa Timur on 8/22/16.
  */
 public class RethrowingExceptions {
 
