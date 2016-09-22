@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.generics.unbound_wildcards;
+package main.com.isatimur.ocp.generics_collections.generics.unbound_wildcards;
 
 import java.util.ArrayList;
 import java.util.List;

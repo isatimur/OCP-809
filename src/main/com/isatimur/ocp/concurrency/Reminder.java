@@ -1,4 +1,4 @@
-package com.isatimur.ocp.concurrency;
+package main.com.isatimur.ocp.concurrency;
 
 /**
  * Created by Isa Timur on 6/12/16.

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.collections.queues;
+package main.com.isatimur.ocp.generics_collections.collections.queues;
 
 import java.util.ArrayDeque;
 import java.util.LinkedList;

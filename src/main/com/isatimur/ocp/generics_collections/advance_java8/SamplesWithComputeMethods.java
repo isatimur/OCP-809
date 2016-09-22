@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.advance_java8;
+package main.com.isatimur.ocp.generics_collections.advance_java8;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.streams;
+package main.com.isatimur.ocp.package_4.streams;
 
 import java.util.Random;
 import java.util.regex.Pattern;

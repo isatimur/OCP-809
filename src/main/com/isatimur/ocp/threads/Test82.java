@@ -1,4 +1,4 @@
-package com.isatimur.ocp.threads;
+package main.com.isatimur.ocp.threads;
 
 /**
  * Created by Isa Timur on 7/19/16.

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.lambda;
+package main.com.isatimur.ocp.lambda;
 
 /**
  * Created by Isachenko Timur on 08.07.2016.

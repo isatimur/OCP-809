@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.collections.queue;
+package main.com.isatimur.ocp.package_4.collections.queue;
 
 import java.util.Collection;
 import java.util.Deque;

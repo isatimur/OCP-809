@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_2;
+package main.com.isatimur.ocp.package_2;
 
 ///**
 // * Created by tisachenko on 16.02.2016.

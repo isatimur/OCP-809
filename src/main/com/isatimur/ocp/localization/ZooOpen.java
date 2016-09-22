@@ -1,4 +1,4 @@
-package com.isatimur.ocp.localization;
+package main.com.isatimur.ocp.localization;
 
 import java.util.Locale;
 import java.util.Properties;
@@ -22,7 +22,7 @@ public class ZooOpen {
     }
 
     public static void printProperties(Locale locale) {
-        ResourceBundle rb = ResourceBundle.getBundle("com.isatimur.ocp.localization.Zoo", locale);
+        ResourceBundle rb = ResourceBundle.getBundle("main.com.isatimur.ocp.localization.Zoo", locale);
 //        System.out.println(resourceBundle.getString("hello"));
 //        System.out.println(resourceBundle.getString("open"));
 //        System.out.println(resourceBundle.getString("testKey"));

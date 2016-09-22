@@ -1,7 +1,7 @@
-package com.isatimur.ocp.generics_collections.advance_java8;
+package main.com.isatimur.ocp.generics_collections.advance_java8;
 
-import com.isatimur.ocp.generics_collections.comparator.Duck;
-import com.isatimur.ocp.lambda.Predicate;
+import main.com.isatimur.ocp.generics_collections.comparator.Duck;
+import main.com.isatimur.ocp.lambda.Predicate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

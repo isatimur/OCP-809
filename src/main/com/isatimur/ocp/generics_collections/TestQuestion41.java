@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections;
+package main.com.isatimur.ocp.generics_collections;
 
 import java.util.Iterator;
 import java.util.TreeSet;

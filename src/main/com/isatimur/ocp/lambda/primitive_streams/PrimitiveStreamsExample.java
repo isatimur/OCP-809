@@ -1,4 +1,4 @@
-package com.isatimur.ocp.lambda.primitive_streams;
+package main.com.isatimur.ocp.lambda.primitive_streams;
 
 import java.util.OptionalDouble;
 import java.util.stream.DoubleStream;

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_2.enums.quize;
+package main.com.isatimur.ocp.package_2.enums.quize;
 
 import java.awt.Color;
 

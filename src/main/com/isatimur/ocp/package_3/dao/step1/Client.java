@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_3.dao.step1;
+package main.com.isatimur.ocp.package_3.dao.step1;
 
 /**
  * Created by tisachenko on 02.03.16.

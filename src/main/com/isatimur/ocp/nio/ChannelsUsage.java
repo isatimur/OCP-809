@@ -1,4 +1,4 @@
-package com.isatimur.ocp.nio;
+package main.com.isatimur.ocp.nio;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

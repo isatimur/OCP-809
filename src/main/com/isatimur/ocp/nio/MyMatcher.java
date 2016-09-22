@@ -1,4 +1,4 @@
-package com.isatimur.ocp.nio;
+package main.com.isatimur.ocp.nio;
 
 /**
  * Created by tisachenko on 25.04.16.

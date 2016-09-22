@@ -1,4 +1,4 @@
-package com.isatimur.ocp.kaplan_test;
+package main.com.isatimur.ocp.kaplan_test;
 
 /**
  * Created by Isa Timur on 9/10/16.

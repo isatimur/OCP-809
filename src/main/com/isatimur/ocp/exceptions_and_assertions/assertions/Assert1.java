@@ -1,4 +1,4 @@
-package com.isatimur.ocp.exceptions_and_assertions.assertions;
+package main.com.isatimur.ocp.exceptions_and_assertions.assertions;
 
 /**
  * Created by tisachenko on 28.03.16.

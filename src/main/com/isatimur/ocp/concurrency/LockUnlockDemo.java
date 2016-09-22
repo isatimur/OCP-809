@@ -1,4 +1,4 @@
-package com.isatimur.ocp.concurrency;
+package main.com.isatimur.ocp.concurrency;
 
 /**
  * Created by tisachenko on 07.06.16.

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.advanced_java_class_designer.factory;
+package main.main.com.isatimur.ocp.advanced_java_class_designer.factory;
 
 /**
  * Created by Isa Timur on 7/30/16.

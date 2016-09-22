@@ -1,4 +1,4 @@
-package com.isatimur.ocp.localization;
+package main.com.isatimur.ocp.localization;
 
 import java.text.NumberFormat;
 import java.util.Locale;

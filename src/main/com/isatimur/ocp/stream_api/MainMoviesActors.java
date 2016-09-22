@@ -1,7 +1,7 @@
-package com.isatimur.ocp.stream_api;
+package main.com.isatimur.ocp.stream_api;
 
-import com.isatimur.ocp.stream_api.model.Actor;
-import com.isatimur.ocp.stream_api.model.Movie;
+import main.com.isatimur.ocp.stream_api.model.Actor;
+import main.com.isatimur.ocp.stream_api.model.Movie;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

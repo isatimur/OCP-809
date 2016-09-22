@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.generics;
+package main.com.isatimur.ocp.package_4.generics;
 
 interface MyMap<K, V> {
     void put(K key, V value);

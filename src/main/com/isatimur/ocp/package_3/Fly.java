@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_3;
+package main.com.isatimur.ocp.package_3;
 
 /**
  * Created by Isa Timur on 7/23/16.

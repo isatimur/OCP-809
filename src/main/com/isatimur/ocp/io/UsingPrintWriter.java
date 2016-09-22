@@ -1,4 +1,4 @@
-package com.isatimur.ocp.io;
+package main.com.isatimur.ocp.io;
 
 import java.io.FileWriter;
 import java.io.IOException;

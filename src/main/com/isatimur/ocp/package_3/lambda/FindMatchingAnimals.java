@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_3.lambda;
+package main.com.isatimur.ocp.package_3.lambda;
 
 interface CheckTrait {
     public boolean test(Animal a);

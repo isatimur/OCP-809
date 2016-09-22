@@ -1,4 +1,4 @@
-package com.isatimur.ocp.exceptions_and_assertions.exceptions;
+package main.com.isatimur.ocp.exceptions_and_assertions.exceptions;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

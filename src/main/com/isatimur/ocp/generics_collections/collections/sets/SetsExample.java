@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.collections.sets;
+package main.com.isatimur.ocp.generics_collections.collections.sets;
 
 import java.util.HashSet;
 import java.util.NavigableSet;

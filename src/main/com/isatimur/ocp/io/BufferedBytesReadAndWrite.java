@@ -1,4 +1,4 @@
-package com.isatimur.ocp.io;
+package main.com.isatimur.ocp.io;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

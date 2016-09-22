@@ -1,4 +1,4 @@
-package com.isatimur.ocp.threads;
+package main.com.isatimur.ocp.threads;
 
 /**
  * Created by tisachenko on 22.05.16.

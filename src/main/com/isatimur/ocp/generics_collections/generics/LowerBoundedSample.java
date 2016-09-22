@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.generics.lower_bounded_wildcard;
+package main.com.isatimur.ocp.generics_collections.generics.lower_bounded_wildcard;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

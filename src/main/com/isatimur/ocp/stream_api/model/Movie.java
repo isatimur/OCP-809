@@ -1,4 +1,4 @@
-package com.isatimur.ocp.stream_api.model;
+package main.com.isatimur.ocp.stream_api.model;
 
 import java.util.HashSet;
 import java.util.Set;

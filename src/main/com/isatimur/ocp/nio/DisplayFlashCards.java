@@ -1,4 +1,4 @@
-package com.isatimur.ocp.nio;
+package main.com.isatimur.ocp.nio;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

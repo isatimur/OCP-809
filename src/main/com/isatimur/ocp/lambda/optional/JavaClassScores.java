@@ -1,4 +1,4 @@
-package com.isatimur.ocp.lambda.optional;
+package main.com.isatimur.ocp.lambda.optional;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.collections.lists;
+package main.com.isatimur.ocp.generics_collections.collections.lists;
 
 import java.util.ArrayList;
 import java.util.List;

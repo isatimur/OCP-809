@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.generics.bounded;
+package main.com.isatimur.ocp.package_4.generics.bounded;
 
 interface Wrappable {
 }

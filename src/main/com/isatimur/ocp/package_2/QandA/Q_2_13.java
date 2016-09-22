@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_2.QandA;
+package main.com.isatimur.ocp.package_2.QandA;
 
 /**
  * Created by tisachenko on 19.02.16.

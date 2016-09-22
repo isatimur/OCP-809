@@ -1,4 +1,4 @@
-package com.isatimur.ocp.stream_api;
+package main.com.isatimur.ocp.stream_api;
 
 import java.util.ArrayList;
 import java.util.stream.Collector;

@@ -1,6 +1,6 @@
-package com.isatimur.ocp.exceptions_and_assertions.assertions;
+package main.com.isatimur.ocp.exceptions_and_assertions.assertions;
 
-import static com.isatimur.ocp.exceptions_and_assertions.assertions.TestSeasons.test;
+import static main.com.isatimur.ocp.exceptions_and_assertions.assertions.TestSeasons.test;
 
 /**
  * Created by Isa Timur on 8/22/16.

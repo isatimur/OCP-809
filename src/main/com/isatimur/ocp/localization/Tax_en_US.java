@@ -1,4 +1,4 @@
-package com.isatimur.ocp.localization;
+package main.com.isatimur.ocp.localization;
 
 import java.util.ListResourceBundle;
 import java.util.ResourceBundle;
@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
  */
 public class Tax_en_US extends ListResourceBundle {
     public static void main(String[] args) {
-        ResourceBundle rb = ResourceBundle.getBundle("com.isatimur.ocp.localization.Tax");
+        ResourceBundle rb = ResourceBundle.getBundle("main.com.isatimur.ocp.localization.Tax");
         System.out.println(rb.getObject("tax"));
     }
 

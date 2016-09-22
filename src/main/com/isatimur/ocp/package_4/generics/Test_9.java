@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.generics;
+package main.com.isatimur.ocp.package_4.generics;
 
 /**
  * Created by tisachenko on 19.03.16.

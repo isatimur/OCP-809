@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.collections;
+package main.com.isatimur.ocp.package_4.collections;
 
 import java.util.HashMap;
 import java.util.Map;

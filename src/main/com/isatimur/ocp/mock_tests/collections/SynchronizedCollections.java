@@ -1,4 +1,4 @@
-package com.isatimur.ocp.mock_tests.collections;
+package main.com.isatimur.ocp.mock_tests.collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;

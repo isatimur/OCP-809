@@ -1,4 +1,4 @@
-package com.isatimur.ocp.localization.number_formats;
+package main.com.isatimur.ocp.localization.number_formats;
 
 import java.text.NumberFormat;
 import java.text.ParseException;

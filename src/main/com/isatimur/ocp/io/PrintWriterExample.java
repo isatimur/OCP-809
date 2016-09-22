@@ -1,6 +1,6 @@
-package com.isatimur.ocp.io;
+package main.com.isatimur.ocp.io;
 
-import com.isatimur.ocp.generics_collections.comparable.Animal;
+import main.com.isatimur.ocp.generics_collections.comparable.Animal;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 

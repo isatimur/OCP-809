@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.generics.mixing_raw_types;
+package main.com.isatimur.ocp.package_4.generics.mixing_raw_types;
 
 interface MyMap<K, V> {
     void put(K key, V value);

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.advanced_java_class_designer;
+package main.main.com.isatimur.ocp.advanced_java_class_designer;
 
 /**
  * Created by Isachenko Timur on 21.07.2016.

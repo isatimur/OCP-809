@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.collections.list;
+package main.com.isatimur.ocp.package_4.collections.list;
 
 import java.util.ArrayList;
 import java.util.ListIterator;

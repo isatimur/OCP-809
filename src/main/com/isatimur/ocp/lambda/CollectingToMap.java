@@ -1,4 +1,4 @@
-package com.isatimur.ocp.lambda;
+package main.com.isatimur.ocp.lambda;
 
 import java.util.List;
 import java.util.Map;

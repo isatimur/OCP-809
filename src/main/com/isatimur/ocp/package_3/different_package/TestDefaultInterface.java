@@ -1,6 +1,6 @@
-package com.isatimur.ocp.package_3.different_package;
+package main.com.isatimur.ocp.package_3.different_package;
 
-import com.isatimur.ocp.package_3.MyInterfaces;
+import main.com.isatimur.ocp.package_3.MyInterfaces;
 import java.util.List;
 import java.util.stream.Stream;
 

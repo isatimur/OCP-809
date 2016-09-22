@@ -1,4 +1,4 @@
-package com.isatimur.ocp.concurrency;
+package main.com.isatimur.ocp.concurrency;
 
 import java.util.concurrent.Callable;
 

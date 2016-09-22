@@ -1,6 +1,6 @@
-package com.isatimur.ocp.advanced_java_class_designer.mouse;
+package main.main.com.isatimur.ocp.advanced_java_class_designer.mouse;
 
-import com.isatimur.ocp.advanced_java_class_designer.cat.BigCat;
+import main.main.com.isatimur.ocp.advanced_java_class_designer.cat.BigCat;
 
 /**
  * Created by tisachenko on 22.02.16.

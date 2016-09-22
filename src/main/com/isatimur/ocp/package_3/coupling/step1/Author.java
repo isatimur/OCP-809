@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_3.coupling.step1;
+package main.com.isatimur.ocp.package_3.coupling.step1;
 
 /**
  * Created by tisachenko on 01.03.16.

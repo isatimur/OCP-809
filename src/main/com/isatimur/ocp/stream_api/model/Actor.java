@@ -1,4 +1,4 @@
-package com.isatimur.ocp.stream_api.model;
+package main.com.isatimur.ocp.stream_api.model;
 
 /**
  * Created by Isa Timur on 7/12/16.

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.kaplan_test;
+package main.com.isatimur.ocp.kaplan_test;
 
 import java.util.ArrayList;
 import java.util.Arrays;

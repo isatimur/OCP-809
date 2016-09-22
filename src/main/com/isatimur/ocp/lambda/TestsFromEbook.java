@@ -1,4 +1,4 @@
-package com.isatimur.ocp.lambda;
+package main.com.isatimur.ocp.lambda;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;

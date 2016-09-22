@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_3.immutable;
+package main.com.isatimur.ocp.package_3.immutable;
 
 /**
  * Created by tisachenko on 02.03.16.

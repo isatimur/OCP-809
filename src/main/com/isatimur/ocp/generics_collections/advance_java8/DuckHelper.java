@@ -1,6 +1,6 @@
-package com.isatimur.ocp.generics_collections.advance_java8;
+package main.com.isatimur.ocp.generics_collections.advance_java8;
 
-import com.isatimur.ocp.generics_collections.comparator.Duck;
+import main.com.isatimur.ocp.generics_collections.comparator.Duck;
 
 /**
  * Created by Isa Timur on 8/8/16.

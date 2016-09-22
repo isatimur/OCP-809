@@ -1,4 +1,4 @@
-package com.isatimur.ocp.advanced_java_class_designer;
+package main.main.com.isatimur.ocp.advanced_java_class_designer;
 
 enum Metal {
     COPPER, GOLD, SILVER;

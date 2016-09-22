@@ -1,4 +1,4 @@
-package com.isatimur.ocp.localization;
+package main.com.isatimur.ocp.localization;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

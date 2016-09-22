@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_2.QandA;
+package main.com.isatimur.ocp.package_2.QandA;
 
 interface Floatable {
     //public and not default access modifier

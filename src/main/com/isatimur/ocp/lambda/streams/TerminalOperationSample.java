@@ -1,4 +1,4 @@
-package com.isatimur.ocp.lambda.streams;
+package main.com.isatimur.ocp.lambda.streams;
 
 import java.util.Optional;
 import java.util.stream.Stream;

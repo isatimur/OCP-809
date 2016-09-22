@@ -1,4 +1,4 @@
-package com.isatimur.ocp.datetime;
+package main.com.isatimur.ocp.datetime;
 
 import java.time.Clock;
 import java.time.Duration;

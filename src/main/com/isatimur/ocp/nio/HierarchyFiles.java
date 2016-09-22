@@ -1,4 +1,4 @@
-package com.isatimur.ocp.nio;
+package main.com.isatimur.ocp.nio;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_4.collections.set_maps;
+package main.com.isatimur.ocp.package_4.collections.set_maps;
 
 import java.util.Comparator;
 import java.util.Iterator;

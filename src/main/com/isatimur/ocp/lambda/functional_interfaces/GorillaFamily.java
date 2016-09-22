@@ -1,4 +1,4 @@
-package com.isatimur.ocp.lambda.functional_interfaces;
+package main.com.isatimur.ocp.lambda.functional_interfaces;
 
 interface Gorrila {
     String move();

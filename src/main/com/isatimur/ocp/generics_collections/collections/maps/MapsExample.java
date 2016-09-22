@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.collections.maps;
+package main.com.isatimur.ocp.generics_collections.collections.maps;
 
 import java.util.HashMap;
 import java.util.Map;

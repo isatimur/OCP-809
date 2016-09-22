@@ -1,4 +1,4 @@
-package com.isatimur.ocp.localization.date_formet;
+package main.com.isatimur.ocp.localization.date_formet;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

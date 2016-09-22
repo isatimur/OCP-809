@@ -1,4 +1,4 @@
-package com.isatimur.ocp.package_2.ocp.enums;
+package main.com.isatimur.ocp.package_2.ocp.enums;
 
 /**
  * Created by tisachenko on 26.02.16.

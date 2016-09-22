@@ -1,4 +1,4 @@
-package com.isatimur.ocp.exceptions_and_assertions.exceptions.additional_interface;
+package main.com.isatimur.ocp.exceptions_and_assertions.exceptions.additional_interface;
 
 import java.io.IOException;
 

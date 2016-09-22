@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.comparable;
+package main.com.isatimur.ocp.generics_collections.comparable;
 
 import java.util.ArrayList;
 import java.util.Collections;

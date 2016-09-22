@@ -1,4 +1,4 @@
-package com.isatimur.ocp.localization;
+package main.com.isatimur.ocp.localization;
 
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -45,7 +45,7 @@ public class IndianArt {
 
     private void setLocaleSpecificData(Locale locale) {
         ResourceBundle labels =
-            ResourceBundle.getBundle("com.isatimur.ocp.localization.IndianArtLabelsBundle", locale);
+            ResourceBundle.getBundle("main.com.isatimur.ocp.localization.IndianArtLabelsBundle", locale);
         String text = null;
         text = labels.getString("total_bookings");
         lTotalBookings.setText(text);

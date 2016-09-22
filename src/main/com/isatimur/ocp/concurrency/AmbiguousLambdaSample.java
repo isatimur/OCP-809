@@ -1,6 +1,6 @@
-package com.isatimur.ocp.concurrency;
+package main.com.isatimur.ocp.concurrency;
 
-import com.isatimur.ocp.lambda.functional_interfaces.Supplier;
+import main.com.isatimur.ocp.lambda.functional_interfaces.Supplier;
 import java.io.IOException;
 import java.util.concurrent.Callable;
 
