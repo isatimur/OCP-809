@@ -1,4 +1,4 @@
-package com.isatimur.ocp.advanced_java_class_designer;
+package com.isatimur.ocp.design_patterns_principals.immutible;
 
 import java.util.ArrayList;
 import java.util.List;

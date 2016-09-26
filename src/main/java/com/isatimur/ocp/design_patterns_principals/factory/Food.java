@@ -1,4 +1,4 @@
-package com.isatimur.ocp.advanced_java_class_designer.factory;
+package com.isatimur.ocp.design_patterns_principals.factory;
 
 /**
  * Created by Isa Timur on 7/30/16.
@@ -15,7 +15,6 @@ public abstract class Food {
     }
 
     public abstract void consumed();
-
 }
 
 class Hay extends Food {
