@@ -5,7 +5,8 @@ package com.isatimur.ocp.lambda;
  */
 @FunctionalInterface
 public interface Predicate<T> {
-    public static void main(String[] args) {
+
+    static void main(String[] args) {
         Predicate<String> p1 = s -> s.length() < 20;
         Predicate<String> p2 = s -> s.length() > 5;
 

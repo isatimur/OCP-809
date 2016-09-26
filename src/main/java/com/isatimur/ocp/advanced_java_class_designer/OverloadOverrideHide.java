@@ -35,9 +35,9 @@ public class OverloadOverrideHide {
 //}
 
 //d) here it compile and override method inherited from Book class in CourseBook class
-//class Book {
-//    void print(){}
-//}
-//class CourseBook extends Book{
-//    void print(){}
-//}
+class Book {
+    void print(){}
+}
+class CourseBook extends Book{
+    void print(){}
+}

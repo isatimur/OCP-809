@@ -4,7 +4,22 @@ package com.isatimur.ocp.generics_collections.comparable;
  * Created by Isa Timur on 8/8/16.
  */
 public class Animal implements java.lang.Comparable<Animal> {
+
     private int id;
+    private String species;
+    private boolean canHop;
+    private boolean canSwim;
+
+    public Animal(){}
+
+    public Animal(String speciesName, boolean hopper, boolean swimmer) {
+        species = speciesName;
+        canHop = hopper;
+        canSwim = swimmer;
+    }
+    public boolean canHop() { return canHop; }
+    public boolean canSwim() { return canSwim; }
+    public String toString() { return species; }
 
     public static void main(String[] args) {
         Animal a1 = new Animal();
