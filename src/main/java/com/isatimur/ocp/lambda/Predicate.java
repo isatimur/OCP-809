@@ -7,6 +7,9 @@ package com.isatimur.ocp.lambda;
 public interface Predicate<T> {
 
     static void main(String[] args) {
+
+
+//        Predicate<String> p3 = () -> "";
         Predicate<String> p1 = s -> s.length() < 20;
         Predicate<String> p2 = s -> s.length() > 5;
 

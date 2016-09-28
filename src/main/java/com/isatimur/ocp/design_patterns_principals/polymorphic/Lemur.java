@@ -9,6 +9,8 @@ public class Lemur extends Primate implements HasTail {
     }
 
     public static void main(String[] args) {
+
+
         Lemur lemur = new Lemur();
         System.out.println(lemur.age);
 
@@ -16,6 +18,8 @@ public class Lemur extends Primate implements HasTail {
         HasTail hasTail1 = new Lemur();
         Primate primateOrigin = new Primate();
 
+        // вниз по иерархии не приводится - получим ClassCastException
+        // ((Lemur)primateOrigin).isTailStriped();
 
         System.out.println(hasTail.isTailStriped());
 
