@@ -1,7 +1,5 @@
 package com.isatimur.ocp.generics_collections.generics.habr;
 
-import com.sun.istack.internal.Nullable;
-
 import java.util.Collection;
 import java.util.Map;
 import java.util.function.Predicate;
@@ -21,7 +19,6 @@ public interface MyObjectStore<K, V> {
      * @param key Ключ.
      * @return Значение либо null.
      */
-    @Nullable
     V get(K key);
 
     /**

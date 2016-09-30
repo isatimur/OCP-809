@@ -41,7 +41,7 @@ public class AllTogether {
 //    }
 
     //    a normal example
-    void method4(List<? super B> list) {
+    <T> void method4(List<? super B> list) {
 
     }
 

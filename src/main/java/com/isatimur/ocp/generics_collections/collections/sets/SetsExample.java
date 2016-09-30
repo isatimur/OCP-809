@@ -1,5 +1,7 @@
 package com.isatimur.ocp.generics_collections.collections.sets;
 
+import com.isatimur.ocp.generics_collections.generics.habr.CarHabr;
+
 import java.util.HashSet;
 import java.util.NavigableSet;
 import java.util.Set;
@@ -11,6 +13,14 @@ import java.util.TreeSet;
 public class SetsExample {
     public static void main(String[] args) {
         System.out.println("============HashSet==========");
+
+        Set<CarHabr> carHabrs = new HashSet<>();
+
+        carHabrs.add(new CarHabr("11", "11", 11));
+        // carHabrs.add(new CarHabr("11", "11", 11));
+
+
+
         Set<Integer> set = new HashSet<>();
 
         boolean b1 = set.add(66);

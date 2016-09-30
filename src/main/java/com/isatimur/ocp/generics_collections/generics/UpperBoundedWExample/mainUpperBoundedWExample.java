@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.generics.part_3_upper_bound;
+package com.isatimur.ocp.generics_collections.generics.UpperBoundedWExample;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by abyakimenko on 30.09.2016.
  */
-public class mainFlyerTest {
+public class mainUpperBoundedWExample {
 
     private static void anyFlyer(List<Flyer> flyer) {
         flyer.forEach(x -> System.out.println(x));
