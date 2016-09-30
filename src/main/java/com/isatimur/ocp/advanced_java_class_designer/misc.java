@@ -12,4 +12,8 @@ public class misc {
         if (s1.equals(s2))
             System.out.println("s1.equals(s2)");
     }
+
+    abstract class AbstractClass {
+
+    }
 }

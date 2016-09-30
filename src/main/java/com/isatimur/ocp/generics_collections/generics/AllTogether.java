@@ -9,11 +9,22 @@ import java.util.List;
 public class AllTogether {
     public static void main(String[] args) {
         List<?> list1 = new ArrayList<A>();
-        List<? extends A> list2 = new ArrayList<A>();
-        List<? super A> list3 = new ArrayList<A>();
-//        List<? extends B> list4 = new ArrayList<A>();
+        List<? extends A> list2 = new ArrayList<>();
+        List<? super A> list3 = new ArrayList<>();
+//      List<? extends B> list4 = new ArrayList<A>();
         List<? super B> list5 = new ArrayList<A>();
-//        List<?> list6 = new ArrayList<? extends A>();
+
+        // The problem is that you need to know what that type will be when instantiating the ArrayList
+        // List<?> list6 = new ArrayList<? extends A>();
+    }
+
+//    <T> String method22(List<T> ts) {
+    <T> String method22(List<? extends T> ts) {
+        return "";
+    }
+
+    <T> void method11(List<? extends T> ts) {
+//        return ts.get(0);
     }
 
     <T> T method1(List<? extends T> ts) {

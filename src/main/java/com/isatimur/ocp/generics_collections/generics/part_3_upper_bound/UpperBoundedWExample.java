@@ -1,4 +1,4 @@
-package com.isatimur.ocp.generics_collections.generics;
+package com.isatimur.ocp.generics_collections.generics.part_3_upper_bound;
 
 import java.util.ArrayList;
 import java.util.List;

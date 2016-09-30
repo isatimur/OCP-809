@@ -19,7 +19,6 @@ public class UnbounedExample {
     public static void printList(List<?> list) {
         for (Object x : list) {
             System.out.println(x);
-
         }
     }
 
@@ -28,6 +27,5 @@ public class UnbounedExample {
         keywords.add("java");
         keywords.add("javafx");
         printList(keywords);
-
     }
 }
