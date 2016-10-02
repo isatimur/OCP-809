@@ -35,9 +35,12 @@ public class LowerBoundedWildcardsMain {
         addSound(objects);
         addSound(Arrays.asList(1, 2, 3, 4, 5));
 
+//        List<? super Exception> exceptions = new ArrayList<>();
         List<? super IOException> exceptions = new ArrayList<>();
 
-//        exceptions.add(new Exception()); // DOES NOT COMPILE ?!
+        // при операциях добавления работает как extends - от IOException и до его потомков
+        // exceptions.add(new Exception()); // DOES NOT COMPILE ?!
+        // exceptions.add(new Object());
 
         // при операциях можем юзать только super IOException и наследников этого типа
         exceptions.add(new IOException());

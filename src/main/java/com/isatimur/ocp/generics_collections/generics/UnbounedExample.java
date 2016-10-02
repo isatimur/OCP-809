@@ -27,5 +27,14 @@ public class UnbounedExample {
         keywords.add("java");
         keywords.add("javafx");
         printList(keywords);
+
+
+        List<Integer> keywordsIntegers = new ArrayList<>();
+        keywordsIntegers.add(1);
+        keywordsIntegers.add(2);
+        keywordsIntegers.add(3);
+        keywordsIntegers.add(4);
+
+        total(keywordsIntegers);
     }
 }

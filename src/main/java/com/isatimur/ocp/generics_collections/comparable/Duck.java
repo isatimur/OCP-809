@@ -18,8 +18,9 @@ public class Duck implements Comparable<Duck> {
         List<Duck> ducks = new ArrayList<>();
         ducks.add(new Duck("Quack"));
         ducks.add(new Duck("Puddle"));
+        System.out.println("before sort: " + ducks);
         Collections.sort(ducks);
-        System.out.println(ducks);
+        System.out.println("after sort: " + ducks);
 
     }
 
@@ -27,11 +28,13 @@ public class Duck implements Comparable<Duck> {
         return name;
     }
 
+
     public int compareTo(Duck o) {
-        return this.name.compareTo(o.getName());
+        return name.compareTo(o.getName());
     }
 
-    @Override public String toString() {
+    @Override
+    public String toString() {
         return name;
     }
 }

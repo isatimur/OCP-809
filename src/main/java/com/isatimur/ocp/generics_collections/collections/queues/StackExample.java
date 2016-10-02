@@ -18,6 +18,8 @@ class StackExample {
     }
 
     public static void main(String args[]) {
+
+        // If you need a stack, use an ArrayDeque instead
         Stack st = new Stack();
         System.out.println("stack: " + st);
         showpush(st, 42);
