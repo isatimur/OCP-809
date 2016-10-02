@@ -1,6 +1,7 @@
 package com.isatimur.ocp.generics_collections.generics;
 
 public class SizeLimitedCrate<T, U> {
+
     private T contents;
     private U sizeLimit;
 

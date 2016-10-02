@@ -59,8 +59,8 @@ class MultiFieldComparator implements Comparator<Squirrel> {
 
 class ChainingComparator implements Comparator<Squirrel> {
     public int compare(Squirrel s1, Squirrel s2) {
-        Comparator<Squirrel> c = Comparator.comparing(s -> s.getSpecies());
-        c = c.thenComparingInt(s -> s.getWeight());
+        Comparator<Squirrel> c = Comparator.comparing((Squirrel s) -> s.getSpecies())
+                                           .thenComparingInt(s -> s.getWeight());
         return c.compare(s1, s2);
     }
 }
