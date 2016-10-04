@@ -11,7 +11,10 @@ public class JavaClassScores {
         Optional<Double> aDoubleNull = average();
 
         aDouble.ifPresent(System.out::println);
+        aDoubleNull.ifPresent(System.out::println);
 //        System.out.println(Optional.ofNullable(aDoubleNull.get()));
+        // System.out.println(aDouble.orElseGet(() -> new IllegalStateException())); // DOES NOT COMPILE должен возвращать
+                                                                                  // тот же самый тип данных
         System.out.println("====================");
 
         Optional<Double> o = average();

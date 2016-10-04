@@ -90,6 +90,36 @@ public class java8Additions {
         favorite.merge("Sam", "Skyride", mapper1);
         System.out.println(favorite); // {Tom=Bus Tour, Sam=Skyride}
 
+        // Tom was left alone since there was no merge()call for that key. Sam was added since
+        // that key was not in the original list. Jenny was removed because the mapping function
+        // returned null. You’ll see mergeagain in the next chapter.
+
+
+        // computeIfPresent and computeIfAbsent
+        Map<String, Integer> counts = new HashMap<>();
+        counts.put("Jenny", 1);
+
+        BiFunction<String, Integer, Integer> mapper2 = (k, v) -> v + 1;
+        Integer jenny1 = counts.computeIfPresent("Jenny", mapper2);
+        Integer sam = counts.computeIfPresent("Sam", mapper2);
+        System.out.println(counts); // {Jenny=2}
+        System.out.println(jenny1); // 2
+        System.out.println(sam); // null
+
+
+        // If the mapping function is called and returns null, the key is removed from the map for
+        // computeIfPresent(). For computeIfAbsent(), the key is never added to the map in the
+        // first place, for example:
+        Map<String, Integer> counts1 = new HashMap<>();
+        counts1.put("Jenny", 1);
+        counts1.computeIfPresent("Jenny", (k, v) -> null);
+        counts1.computeIfPresent("Sam", (k, v) -> null);
+
+        counts1.computeIfAbsent("Sam", k -> null);
+        System.out.println(counts1); // {}
+
+        // After running this code, the map is empty. The call to computeIfPresent()removes the
+        // key from the map. The call to computeIfAbsent() doesn’t add a key.
 
     }
 }

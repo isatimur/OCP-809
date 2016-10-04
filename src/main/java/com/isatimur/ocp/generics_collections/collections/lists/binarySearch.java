@@ -25,5 +25,13 @@ public class binarySearch {
 
         Collections.sort(stringList);
         System.out.println(stringList);
+
+        List<Integer> ints = Arrays.asList(1, 2, 3, 4, 5);
+
+//        ints.remove(new Integer(1));
+        //ints.add(2);
+        ints.set(0, 10);
+        ints.replaceAll(i -> i * i); // LINE
+        System.out.println(ints);
     }
 }
