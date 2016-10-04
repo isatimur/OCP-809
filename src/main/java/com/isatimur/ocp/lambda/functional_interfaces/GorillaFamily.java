@@ -9,8 +9,8 @@ interface Gorrila {
  * Created by Isa Timur on 8/9/16.
  * <p>
  * Functional Interfaces # Parameters   Return Type Single Abstract Method
- *
- *
+ * <p>
+ * <p>
  * Supplier<T>             0            T           get  -- Returns a String without taking any parameters
  * Consumer<T>             1 (T)        void        accept
  * BiConsumer<T, U>        2 (T, U)     void        accept
@@ -20,8 +20,6 @@ interface Gorrila {
  * BiFunction<T, U, R>     2 (T, U)     R           apply -- Returns an Integer and takes two Integers
  * UnaryOperator<T>        1 (T)        T           apply
  * BinaryOperator<T>       2 (T, T)     T           apply -- Returns an Integer and takes two Integers
- *
- *
  */
 public class GorillaFamily {
 

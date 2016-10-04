@@ -33,6 +33,22 @@ public class MapsExample {
         hashMap.put("lion", "meat");
         hashMap.put("giraffe", "leaf");
 
+        hashMap.put("giraffe", "HAVAT ZELEN");
+
+
+        hashMap.computeIfPresent("giraffe", (k,v) -> "HAVAT ZELEN11");
+
+        Map<String, Integer> words = new HashMap<>();
+        words.put("hello", 3);
+        words.put("world", 4);
+
+        //words.computeIfPresent("hello", (k, v) -> v + 1);
+        System.out.println(words.get("hello"));
+
+        words.merge("hello", 1, Integer::sum);// смержили значения ключа "hello" - 3 со значением 1 используя функцию sum
+        System.out.println(words);
+
+
         String food = hashMap.get("koala");
         for (String key : hashMap.keySet())
             System.out.println(key + ",");

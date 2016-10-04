@@ -5,11 +5,12 @@ public class staticOuterInnerClass {
     String ss;
     public static class Nested {
         private int price = 6;
+        int priceDef = 6;
     }
 
     public static void main(String[] args) {
 
         Nested nested = new Nested();
-        int price = nested.price;
+        int price = new Nested().price;
     }
 }

@@ -40,6 +40,8 @@ public class TestMap {
 //            System.out.println(i + " is putted to map");
         }
 
+
+
         Date end = new Date();
         System.out.println("Duration (ms) " + (end.getTime() - begin.getTime()));
     }

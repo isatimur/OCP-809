@@ -25,6 +25,7 @@ public class mainNestedClasses {
 
         // Static Nested Classes
         staticOuterInnerClass.Nested nested = new staticOuterInnerClass.Nested();
+        int pric = new staticOuterInnerClass.Nested().priceDef;
 //        System.out.println(nested.price);
     }
 }
