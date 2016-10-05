@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 /**
  * Created by abyakimenko on 04.10.2016.
  */
-public class reduceMaxOpMain {
+public class reduceOpMain {
     public static void main(String[] args) {
 
         System.out.println("=============== REDUCE ====================");

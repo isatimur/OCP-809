@@ -52,5 +52,30 @@ public class allowNulls {
 //        arrayDeque.offer(null);// NPE
 
 //        Finally, Hashtabledoesn’t allow nullkeys or values
+
+
+//        * Rotates the elements in the specified list by the specified distance.
+//        * After calling this method, the element at index <tt>i</tt> will be
+//        * the element previously at index (i - distance) mod list.size(),
+//          for all values of <tt>i</tt> between <tt>0</tt>
+//        * and <tt>list.size()-1</tt>, inclusive.  (This method has no effect on
+//        * the size of the list.)
+//          [t, a, n, k, s] => Collections.rotate(list, -4) => [s, t, a, n, k]
+
+        // Сдвигает на length - distance
+        List<Integer> gradesIntegers = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8)); // LENGTH=9
+        Collections.rotate(gradesIntegers, 7);
+        Collections.rotate(gradesIntegers, 7);
+
+        List<String> grades = new ArrayList<>();
+        grades.addAll(Arrays.asList(new String[]{"C", "A", "B", "A", "D"})); // LENGTH=5
+        Collections.rotate(grades, 1);// CABAD
+//        Collections.rotate(grades, 0);// CABAD
+//        Collections.rotate(grades, -1);// ABADC
+//        Collections.rotate(grades, 1);// CABAD
+//        Collections.rotate(grades, 2);//ADCAB
+
+
+
     }
 }
