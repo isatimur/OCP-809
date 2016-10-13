@@ -1,15 +1,36 @@
 package com.isatimur.ocp.lambda.streams.terminal;
 
-import java.util.Set;
-import java.util.TreeSet;
+import com.isatimur.ocp.lambda.streams.prologistic.Person;
+
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static com.isatimur.ocp.lambda.streams.prologistic.PersonStore.persons;
 
 /**
  * Created by abyakimenko on 04.10.2016.
  */
 public class collectOpMain {
     public static void main(String[] args) {
+
+        // Collecting Using Basic Collectors
+        Stream<String> ohMy = Stream.of("lions", "tigers", "bears");
+        String result = ohMy.collect(Collectors.joining(", ", "[", "]"));
+
+        StringJoiner stringJoiner = new StringJoiner(" --- ", "[", "]");
+        stringJoiner.add("lions").add("tigers").add("bears");
+
+        System.out.println(stringJoiner);
+        System.out.println(result); // lions, tigers, bears
+
+        Stream<String> ohMy1 = Stream.of("tlions", "tigers", "tigers", "tigers", "bears", "bears", "bears");
+        TreeSet<String> result1 = ohMy1
+                .filter(s -> s.startsWith("t"))
+                .collect(Collectors.toCollection(TreeSet::new));
+
+        System.out.println(result1); // [tigers]
+
 
         System.out.println("=============== COLLECT ====================");
         // <R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner)
@@ -49,5 +70,40 @@ public class collectOpMain {
         Stream<String> stream15 = Stream.of("w", "o", "l", "f");
         Set<String> set15 = stream15.collect(Collectors.toSet());
         System.out.println(set15); // [f, w, l, o]
+
+        List<Person> filtered =
+                persons
+                        .stream()
+                        .filter(p -> p.getName().startsWith("I"))
+                        .collect(Collectors.toList());// [Igor, Ira]
+
+        System.out.println(filtered);
+
+        Map<Integer, List<Person>> personsByAge = persons
+                .stream()
+                .collect(Collectors.groupingBy(p -> p.getAge()));
+
+        personsByAge.forEach((age, p) -> System.out.format("age %s: %s\n", age, p));
+        // age 20: [Andrew]
+        // age 23: [Igor, Ira]
+        // age 12: [Vitia]
+
+        System.out.println(persons.stream().collect(Collectors.maxBy((p1, p2) -> p1.getAge() - p2.getAge())));
+
+
+        Stream<String> ohMy2 = Stream.of("lions", "tigers", "bears");
+        Map<Integer, String> map = ohMy2.collect(Collectors.toMap(
+                String::length, k -> k, (s1, s2) -> s1 + "," + s2));
+        System.out.println(map); // {5=lions,bears, 6=tigers}
+        System.out.println(map.getClass());
+
+//        It so happens that the Mapreturned is a HashMap. This behavior is not guaranteed.
+//                Suppose that we want to mandate that the code return a TreeMapinstead. No problem. We
+//        would just add a constructor reference as a parameter:
+        Stream<String> ohMy3 = Stream.of("lions", "tigers", "bears", "b", "be", "brs", "brss");
+        Map<Integer, String> map1 = ohMy3.collect(Collectors.toMap(
+                String::length, k -> k, (s1, s2) -> s1 + "," + s2, TreeMap::new));
+        System.out.println(map1); // // {5=lions,bears, 6=tigers}
+        System.out.println(map1.getClass()); // class. java.util.TreeMap
     }
 }

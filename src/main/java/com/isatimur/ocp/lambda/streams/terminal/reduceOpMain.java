@@ -9,9 +9,14 @@ import java.util.stream.Stream;
 public class reduceOpMain {
     public static void main(String[] args) {
 
-        System.out.println("=============== REDUCE ====================");
+        // Операция Reduce сочетает в себе все элементы потока в единый результат.
+        // Java 8 поддерживает три различных вида reduce метода.
+        System.out.println("=============== REDUCE ===================");
+
         Stream<String> stream = Stream.of("w", "o", "l", "f");
         String word = stream.reduce("", String::concat);
+        // String word1 = stream.reduce((s1, s2) -> s1.length() > s2.length() ? s1 : s2).get();
+
         System.out.println(word); // wolf
 
 

@@ -20,9 +20,8 @@ public class CyclicBarrierTest {
     }
 
     public static void main(String[] args) {
-        System.out.println(
 
-        );
+        System.out.println("AvailableProcessors: " + Runtime.getRuntime().availableProcessors());
 
         ExecutorService service = Executors.newScheduledThreadPool(Runtime.getRuntime().availableProcessors());
 //        service.

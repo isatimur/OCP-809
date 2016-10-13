@@ -62,10 +62,11 @@ public class allowNulls {
 //        * the size of the list.)
 //          [t, a, n, k, s] => Collections.rotate(list, -4) => [s, t, a, n, k]
 
-        // Сдвигает на length - distance
+        // Сдвигает на с length - distance вправо, если distance > 0
+        // Сдвигает на с length - distance вправо, если distance < 0
         List<Integer> gradesIntegers = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8)); // LENGTH=9
-        Collections.rotate(gradesIntegers, 7);
-        Collections.rotate(gradesIntegers, 7);
+        Collections.rotate(gradesIntegers, 1);
+        Collections.rotate(gradesIntegers, -4);
 
         List<String> grades = new ArrayList<>();
         grades.addAll(Arrays.asList(new String[]{"C", "A", "B", "A", "D"})); // LENGTH=5
@@ -74,8 +75,5 @@ public class allowNulls {
 //        Collections.rotate(grades, -1);// ABADC
 //        Collections.rotate(grades, 1);// CABAD
 //        Collections.rotate(grades, 2);//ADCAB
-
-
-
     }
 }

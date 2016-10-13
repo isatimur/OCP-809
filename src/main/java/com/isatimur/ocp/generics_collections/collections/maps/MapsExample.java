@@ -12,6 +12,15 @@ public class MapsExample {
 
     public static void main(String[] args) {
 
+        // как потерять значение в мапе
+        HashMap<LoosingMapClass, String> map = new HashMap<>(4);
+        LoosingMapClass o1 = new LoosingMapClass(1, 2);
+        map.put(o1, "string1");
+        o1.x = 9;
+        o1.y = 15;
+        System.out.println(map.containsKey(o1));// вернет false, хеш изменился (хеш вычисляется на основе х и у)
+
+
 
         LinkedList linkedList = new LinkedList();
         linkedList.add("String 1");

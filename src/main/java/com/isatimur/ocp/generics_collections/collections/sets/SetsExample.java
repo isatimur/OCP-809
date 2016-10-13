@@ -13,13 +13,30 @@ public class SetsExample {
     public static void main(String[] args) {
         System.out.println("============HashSet==========");
 
+        List<Integer> integers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        for (int i = 0; i < integers.size(); i++) {
+            integers.remove(i);
+        }
+
+        // java.util.ConcurrentModificationException
+        Map<String, Object> foodData = new HashMap<>();
+        foodData.put("penguin", 1);
+        foodData.put("flamingo", 2);
+
+        // java.util.ConcurrentModificationException
+        for(String key: foodData.keySet())
+            foodData.remove(key);
+
+
         Set<CarHabr> carHabrs = new HashSet<>();
+
+        // переопределить equals() и hashCode()
+        carHabrs.add(new CarHabr("11", "11", 11));
+        carHabrs.add(new CarHabr("11", "11", 11));
+
 
 //        HashSet<Number> numbers = new HashSet<Integer>();
         List<String> list = new Vector<>();
-
-        carHabrs.add(new CarHabr("11", "11", 11));
-        // carHabrs.add(new CarHabr("11", "11", 11));
 
 
         Set<Integer> set = new HashSet<>();
@@ -67,5 +84,8 @@ public class SetsExample {
         System.out.println("navigableSet.higher(19): " + navigableSet.higher(19));
         System.out.println("navigableSet.higher(22): " + navigableSet.higher(22));
 
+//        Set set1 = new TreeSet()<>;
+//        set.add("A");
+//        set.add("D");
     }
 }

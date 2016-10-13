@@ -64,6 +64,8 @@ public class VehicleHabr {
 
     }
 
+    // если переопределим неверно, то при использовании объекта в сетах или мапах можем получить
+    // либо дубликаты в коллекции либо медленную работу мапы
     @Override
     public int hashCode() {
         int result = name.hashCode();

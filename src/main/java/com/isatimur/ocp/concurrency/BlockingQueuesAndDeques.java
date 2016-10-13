@@ -15,10 +15,10 @@ public class BlockingQueuesAndDeques {
         System.out.println("===================Queue=================");
         BlockingQueue<Integer> blockingQueue = new LinkedBlockingQueue<>();
         blockingQueue.offer(39);
-        blockingQueue.offer(4, 5, TimeUnit.SECONDS);
+        blockingQueue.offer(4, 10, TimeUnit.SECONDS);
 
         System.out.println(blockingQueue.poll());
-        System.out.println(blockingQueue.poll(10, TimeUnit.SECONDS));
+        System.out.println(blockingQueue.poll(5, TimeUnit.SECONDS));
 
         System.out.println("===================Deque=================");
 

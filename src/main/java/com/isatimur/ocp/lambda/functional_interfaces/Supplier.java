@@ -7,7 +7,8 @@ import java.time.LocalDate;
  */
 @FunctionalInterface
 public interface Supplier<T> {
-    public static void main(String[] args) {
+
+    static void main(String[] args) {
         Supplier<LocalDate> s1 = LocalDate::now;
         Supplier<LocalDate> s2 = () -> LocalDate.now();
 

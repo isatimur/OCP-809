@@ -1,11 +1,6 @@
 package com.isatimur.ocp.concurrency;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
@@ -13,7 +8,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
  */
 public class ConcurrentCollections {
     public static void main(String[] args) {
+
+
         List<Integer> list = new CopyOnWriteArrayList<>(Arrays.asList(4, 3, 52));
+//        List<Integer> list = new ArrayList<>(Arrays.asList(4, 3, 52));// java.util.ConcurrentModificationException
         for (Integer i : list) {
             System.out.println(i + " ");
             list.add(9);
@@ -39,9 +37,10 @@ public class ConcurrentCollections {
         foodData.put("penguin", 1);
         foodData.put("flamingo", 2);
         Map<String, Object> synchronizedFoodData = Collections.synchronizedMap(foodData);
+
         for (String key : synchronizedFoodData.keySet()) {
             synchronizedFoodData.get(key);
+            // synchronizedFoodData.remove(key);//  ConcurrentModificationException
         }
-//            synchronizedFoodData.remove(key); ConcurrentModificationException
     }
 }

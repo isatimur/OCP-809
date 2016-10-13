@@ -9,10 +9,13 @@ import java.util.concurrent.Executors;
  */
 public class LionPenManagerCyclicBarrier {
     public static void main(String[] args) throws InterruptedException {
+
         try (ExecutorServiceCloseable service = new ExecutorServiceCloseable(Executors.newFixedThreadPool(4))) {
+
             LionPenManagerCyclicBarrier manager = new LionPenManagerCyclicBarrier();
             CyclicBarrier c1 = new CyclicBarrier(4);
             CyclicBarrier c2 = new CyclicBarrier(4, () -> System.out.println("Pen is cleaned!"));
+
             for (int i = 0; i < 4; i++) {
                 service.submit(() -> manager.performTask(c1, c2));
             }
@@ -38,11 +41,9 @@ public class LionPenManagerCyclicBarrier {
             cleanPen();
             c2.await();
             addAnimals();
-        }
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }
-        catch (BrokenBarrierException e) {
+        } catch (BrokenBarrierException e) {
             e.printStackTrace();
         }
     }

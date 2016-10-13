@@ -22,6 +22,7 @@ public class CheckResultNew {
                     counter++;
                 }
             });
+
             result.get(10, TimeUnit.SECONDS);
             System.out.println("Reached");
         }
