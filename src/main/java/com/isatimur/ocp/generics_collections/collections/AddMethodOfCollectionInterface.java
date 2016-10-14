@@ -2,10 +2,10 @@ package com.isatimur.ocp.generics_collections.collections;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Set;
 
 /**
@@ -18,18 +18,22 @@ public class AddMethodOfCollectionInterface {
         List<String> list = new ArrayList<>();
         System.out.println(list.add("Sparrow"));
         System.out.println(list.add("Sparrow"));
+        System.out.println(list);
         System.out.println("===========HashSet==========");
         Set<String> set = new HashSet<>();
         System.out.println(set.add("Sparrow"));
         System.out.println(set.add("Sparrow"));
+        System.out.println(set);
         System.out.println("===========ArrayDeque==========");
-        Queue<String> queue = new ArrayDeque<>();
-        System.out.println(set.add("Sparrow"));
-        System.out.println(set.add("Sparrow"));
+        Deque<String> queue = new ArrayDeque<>();
+        System.out.println(queue.add("Sparrow"));
+        System.out.println(queue.add("Sparrow"));
+        System.out.println(queue);
         System.out.println("===========LinkedList==========");
         List<String> linkedList = new LinkedList<>();
-        System.out.println(set.add("Sparrow"));
-        System.out.println(set.add("Sparrow"));
+        System.out.println(linkedList.add("Sparrow"));
+        System.out.println(linkedList.add("Sparrow"));
+        System.out.println(linkedList);
 
     }
 }
