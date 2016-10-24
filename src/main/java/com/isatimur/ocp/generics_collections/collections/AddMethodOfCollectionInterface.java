@@ -26,6 +26,10 @@ public class AddMethodOfCollectionInterface {
         System.out.println(set);
         System.out.println("===========ArrayDeque==========");
         Deque<String> queue = new ArrayDeque<>();
+        queue.push("hello");
+        queue.push("hi");
+        queue.push("ola");
+
         System.out.println(queue.add("Sparrow"));
         System.out.println(queue.add("Sparrow"));
         System.out.println(queue);
@@ -34,6 +38,8 @@ public class AddMethodOfCollectionInterface {
         System.out.println(linkedList.add("Sparrow"));
         System.out.println(linkedList.add("Sparrow"));
         System.out.println(linkedList);
+
+
 
     }
 }

@@ -7,8 +7,11 @@ import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 import java.util.Set;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * Created by Isachenko Timur on 10.07.2016.
@@ -46,6 +49,17 @@ public class IntStreamIntro {
         IntSummaryStatistics intSummaryStatistics = shakespearWords.stream().parallel().filter(scrabbleWords::contains).mapToInt(intScore).summaryStatistics();
 
         System.out.println("Stats: " + intSummaryStatistics);
+
+
+        Predicate<? super String> predicate = s -> s.startsWith("g");
+        Stream<String> stream1 = Stream.generate(() -> "growl! ");
+        Stream<String> stream2 = Stream.generate(() -> "growl! ");
+        boolean b1 = stream1.anyMatch(predicate);
+        boolean b2 = stream2.allMatch(predicate);
+        System.out.println(b1 + " " + b2);
+
+        IntStream is = IntStream.empty();
+//        is.average();
 
     }
 }

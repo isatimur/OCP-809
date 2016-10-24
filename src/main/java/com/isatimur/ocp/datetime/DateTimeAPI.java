@@ -26,20 +26,25 @@ public class DateTimeAPI {
         System.out.println(today);
         LocalDate todayAgain = LocalDate.now();
         System.out.println(todayAgain);
+        System.out.println(todayAgain.toEpochDay());
+
 
         System.out.println(today.compareTo(todayAgain) == 0);
 
         LocalTime now = LocalTime.now();
         System.out.println(now);
+        System.out.println(now.toSecondOfDay());
 
         ZoneId id = ZoneId.of("Asia/Tokyo");
         System.out.println(id);
 
         LocalDateTime todayAndNow = LocalDateTime.now();
         System.out.println(todayAndNow);
+        System.out.println(todayAndNow.toEpochSecond(ZoneOffset.of(ZoneOffset.UTC.getId())));
 
         ZonedDateTime todayAndNowInTokyo = ZonedDateTime.now(id);
         System.out.println(todayAndNowInTokyo);
+        System.out.println(todayAndNowInTokyo.toEpochSecond());
 
         LocalDate newYear2016 = LocalDate.of(2016, 1, 1);
         System.out.println(newYear2016);

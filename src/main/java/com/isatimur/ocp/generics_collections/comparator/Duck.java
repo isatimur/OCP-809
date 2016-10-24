@@ -27,9 +27,7 @@ public class Duck implements Comparable<Duck> {
 //        Comparator<Duck> byWeight = (a,b)->a.getWeight()-b.getWeight();
 //        Comparator<Duck> byWeight = (Duck a, Duck b) -> a.getWeight() - b.getWeight();
 //        Comparator<Duck> byWeight = (Duck a, Duck b) -> {return a.getWeight() - b.getWeight()};
-        Comparator<Duck> byWeight = (a, b) -> {
-            return a.getWeight() - b.getWeight();
-        };
+        Comparator<Duck> byWeight = (a, b) -> a.getWeight() - b.getWeight();
 
         List<Duck> ducks = new ArrayList<>();
         ducks.add(new Duck("Quack", 7));

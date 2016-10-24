@@ -1,14 +1,6 @@
 package com.isatimur.ocp.datetime;
 
-import java.time.Duration;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
-import java.time.Period;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -52,6 +44,7 @@ public class OCPDateTimeApi {
         LocalDate startP = LocalDate.of(2016, Month.JANUARY, 1);
         LocalDate endP = LocalDate.of(2016, Month.MARCH, 30);
 
+        System.out.println("==================================== PERIODS ============================================");
         Period period = Period.ofMonths(1);
         performAnimalsEnrichmentPeriod(startP, endP, period);
 
@@ -62,6 +55,9 @@ public class OCPDateTimeApi {
         Period everyYearAndWeek = Period.of(1, 0, 7);
         Period wrongEveryYearAndWeek = Period.ofYears(1).ofWeeks(1); //this is wrong it should be just everyWeek not every year and week
         System.out.println(annually + " " + quarterly + " " + everyThreeWeeks + " " + everyOtherDay + " " + everyYearAndWeek + " (wrong assumption)" + wrongEveryYearAndWeek);
+
+        Period wrong = Period.ofYears(1);
+        wrong = Period.ofWeeks(1);
 
         System.out.println();
         LocalDate localDate = LocalDate.of(2016, 1, 20);
@@ -107,8 +103,22 @@ public class OCPDateTimeApi {
         System.out.println("=================Instant==================");
 
         Instant now = Instant.now();
+        Instant instant2 = Instant.now();
         System.out.println(now);
         Thread.sleep(2000);
+
+        //Instant nextWeek = instant2.plus(1, ChronoUnit.WEEKS); // exception
+//        switch ((ChronoUnit) unit) {
+//        case NANOS: return plusNanos(amountToAdd);
+//        case MICROS: return plus(amountToAdd / 1000_000, (amountToAdd % 1000_000) * 1000);
+//        case MILLIS: return plusMillis(amountToAdd);
+//        case SECONDS: return plusSeconds(amountToAdd);
+//        case MINUTES: return plusSeconds(Math.multiplyExact(amountToAdd, SECONDS_PER_MINUTE));
+//        case HOURS: return plusSeconds(Math.multiplyExact(amountToAdd, SECONDS_PER_HOUR));
+//        case HALF_DAYS: return plusSeconds(Math.multiplyExact(amountToAdd, SECONDS_PER_DAY / 2));
+//        case DAYS: return plusSeconds(Math.multiplyExact(amountToAdd, SECONDS_PER_DAY));
+
+        String superString = "superString";
 
         Instant later = Instant.now();
         System.out.println(later);

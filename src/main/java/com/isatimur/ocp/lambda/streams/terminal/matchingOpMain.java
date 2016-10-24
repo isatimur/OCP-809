@@ -2,6 +2,7 @@ package com.isatimur.ocp.lambda.streams.terminal;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BooleanSupplier;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
@@ -19,5 +20,7 @@ public class matchingOpMain {
         System.out.println("allMatch: " + list.stream().allMatch(pred)); // false
         System.out.println("noneMatch: " + list.stream().noneMatch(pred)); // false
         System.out.println("anyMatch: " + infinite1.anyMatch(pred)); // true
+
+        BooleanSupplier booleanSupplier = () -> true;
     }
 }

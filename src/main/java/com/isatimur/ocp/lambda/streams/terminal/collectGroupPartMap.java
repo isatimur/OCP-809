@@ -2,6 +2,7 @@ package com.isatimur.ocp.lambda.streams.terminal;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -25,6 +26,19 @@ public class collectGroupPartMap {
         /*Suppose that we don’t want a List as the value in the map and prefer a Setinstead. No
         problem. There’s another method signature that lets us pass a downstream collector. This is
         a second collector that does something special with the values:*/
+
+        IntStream is = IntStream.empty();
+        is.average(); // OptionalDouble
+//        is.findAny(); // OptionalInt
+//        is.sum();     //returns the type int
+
+        System.out.println(Stream.iterate(1, x -> ++x).limit(5).map(x -> x + "").collect(Collectors.
+                joining()));
+
+        List list = new ArrayList();
+        list.add("one");
+        list.add("two");
+        list.add(7);
 
         Map<Integer, Set<String>> map1 = ohMySet.collect(
                 Collectors.groupingBy(String::length, Collectors.toSet()));
@@ -61,19 +75,21 @@ public class collectGroupPartMap {
                 String::length, Collectors.counting()));
         System.out.println(map4); // {5=2, 6=1}
 
-        /*Finally, there is a mapping()collector that lets us go down a level and add another
+        /*Finally, there is a mapping() collector that lets us go down a level and add another
         collector. Suppose that we wanted to get the first letter of the first animal alphabetically of
         each length. Why? Perhaps for random sampling. The examples on this part of the exam
         are fairly contrived as well. We’d write the following*/
 
         Stream<String> ohMyStringStream1 = Stream.of("lions", "tigers", "bears", "fears", "rearseeee", "hearees");
-        Map<Integer, Optional<Character>> map5 = ohMyStringStream1.collect(
+        Map<Integer, Character> map5 = ohMyStringStream1.collect(
                 Collectors.groupingBy(
                         String::length,
-                        Collectors.mapping(s -> s.charAt(0),
-                                Collectors.minBy(Comparator.naturalOrder()))));
+                        Collectors.mapping(
+                                (String s) -> s.charAt(0),
+                                Collectors.collectingAndThen(
+                                        Collectors.minBy(Comparator.naturalOrder()), (Optional<Character> a) -> a.get())
+                        )
+                ));
         System.out.println(map5); // {5=Optional[b], 6=Optional[t]}
-
-
     }
 }
