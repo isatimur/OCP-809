@@ -3,13 +3,14 @@ package com.isatimur.ocp.io;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by tisachenko on 05.04.16.
  */
 public class FileStreamAlwaysReadAndWriteBytes {
     public static void main(String[] args) throws IOException {
-        try (FileInputStream in = new FileInputStream("text.txt");
+        try (InputStream in = new FileInputStream("text.txt");
              FileOutputStream out = new FileOutputStream("text.txt");
         ) {
             //so writes only 1 byte from int last 8 lower bits

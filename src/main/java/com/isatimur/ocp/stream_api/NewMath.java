@@ -15,10 +15,12 @@ import static java.util.stream.Collectors.toList;
  */
 public class NewMath {
     public static void main(String[] args) {
-        List<Double> doubles = DoubleStream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25, 64, 49, 36, 125, 121)
+        List<Double> doubles1 = DoubleStream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25, 64, 49, 36, 125, 121)
             .boxed()
             .collect(toList());
         List<Double> result = new ArrayList<>();
+
+        System.out.println("stop");
 
         Function<Double, Stream<Double>> invSqrt = d -> NewMath
             .inv(d)
@@ -26,7 +28,7 @@ public class NewMath {
             .map(dd -> Stream.of(d))
             .orElseGet(() -> Stream.empty());
 
-        List<Double> invSqrtDouble = doubles.stream().parallel()
+        List<Double> invSqrtDouble = doubles1.stream().parallel()
             .flatMap(invSqrt)
             .peek(System.out::println)
             .collect(Collectors.toList());

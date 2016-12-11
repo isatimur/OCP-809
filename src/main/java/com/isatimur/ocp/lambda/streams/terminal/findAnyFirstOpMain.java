@@ -12,7 +12,13 @@ public class findAnyFirstOpMain {
 
         Stream<String> animals = Stream.of("monkey", "gorilla", "bobondo");
         Stream<String> infinite = Stream.generate(() -> "chimp");
+        System.out.println(infinite.anyMatch(String::isEmpty));
+        System.out.println(infinite.noneMatch(String::isEmpty));
+        System.out.println(infinite.allMatch(String::isEmpty));
+
         animals.findAny().ifPresent(System.out::println);
         infinite.findFirst().ifPresent(System.out::println);
+
+
     }
 }

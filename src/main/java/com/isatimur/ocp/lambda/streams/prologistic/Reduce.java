@@ -15,6 +15,18 @@ import static com.isatimur.ocp.lambda.streams.prologistic.PersonStore.persons;
  */
 public class Reduce {
 
+    /**
+     * Тип женерик - <T> и возвращает T => <T> T
+     *
+     * @param object
+     * @param <T>
+     * @return
+     */
+    public static <T> T genericMethod(T object) {
+
+        return object;
+    }
+
     public static void main(String[] args) {
 
         // одна из идей - работает как аккумулятор
@@ -50,8 +62,8 @@ public class Reduce {
         Integer ageSumm = persons
                 .stream()
                 .reduce(0,
-                        (sum, p) -> sum += p.age   // accumulator
-                        , (sum1, sum2) -> sum1 + sum2 // combiner
+                        (sum, p) -> sum += p.age,   // accumulator
+                        (sum1, sum2) -> sum1 + sum2 // combiner
                 );
         System.out.println(ageSumm);
 
@@ -142,7 +154,7 @@ public class Reduce {
         // forEach: AA2
 
         Supplier<Stream<String>> streamSupplier = () -> Stream.of("dd2", "aa2", "bb1", "bb3", "cc")
-                                                        .filter(s -> s.startsWith("a"));
+                .filter(s -> s.startsWith("a"));
 
         streamSupplier.get().anyMatch(s -> true);   // операция пройдет успешно
         streamSupplier.get().noneMatch(s -> true);  // здесь также все будет ok

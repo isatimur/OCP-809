@@ -4,6 +4,7 @@ package com.isatimur.ocp.exceptions_and_assertions.exceptions;
  * Created by tisachenko on 27.03.16.
  */
 public class SuppressedException {
+
     public static void main(String[] args) throws Exception {
         try (RiftRaft raft = new RiftRaft()) {
             raft.crossRapid();

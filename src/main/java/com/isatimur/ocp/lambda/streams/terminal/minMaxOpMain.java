@@ -1,5 +1,6 @@
 package com.isatimur.ocp.lambda.streams.terminal;
 
+import java.util.Comparator;
 import java.util.Optional;
 import java.util.stream.Stream;
 
@@ -23,10 +24,11 @@ public class minMaxOpMain {
         System.out.println("max compareTo: " + s2.max(String::compareTo));
 
         Stream<String> s3 = Stream.of("monley", "ape", "bonobo");
-        Optional<String> minString = s3.min((a1, a2) -> a1.length() - a2.length());
+        Optional<String> minString = s3.min(Comparator.comparingInt(String::length));
         minString.ifPresent(System.out::println);
 
         Optional<?> minEmpty = Stream.empty().min((a1, a2) -> 0);
         System.out.println(minEmpty.isPresent());
+
     }
 }

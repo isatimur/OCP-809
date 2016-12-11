@@ -5,6 +5,7 @@ package com.isatimur.ocp.exceptions_and_assertions.assertions;
  */
 public class TrickAssert {
     public static void main(String[] args) {
+
         boolean b = false;
         assert (b = true) : new Person();
     }

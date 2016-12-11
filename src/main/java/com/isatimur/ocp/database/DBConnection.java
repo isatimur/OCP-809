@@ -10,6 +10,8 @@ import java.sql.Statement;
  */
 public class DBConnection {
     public static void main(String[] args) throws SQLException {
+
+
         String url = "jdbc:derby:zoo;create=true";
         try (Connection conn = DriverManager.getConnection(url);
              Statement stmt = conn.createStatement()) {

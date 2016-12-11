@@ -3,10 +3,7 @@ package com.isatimur.ocp.sybex;
 
 import com.isatimur.ocp.generics_collections.comparator.Duck;
 
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Created by abyakimenko on 02.10.2016.
@@ -22,6 +19,8 @@ public class comparableSortedMain implements Comparable<comparableSortedMain>, C
     }
 
     public static void main(String[] args) {
+
+//        List ints = new ArrayList<>();
 
         Queue<Integer> queue = new LinkedList<>();
 //        List<Integer> queue = new LinkedList<>();

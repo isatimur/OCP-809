@@ -22,7 +22,7 @@ public class reduceOpMain {
 
         Stream<Integer> integerStream = Stream.of(3, 5, 6);
 //        integerStream.map(x -> x * x).forEach(System.out::println);
-        System.out.println(integerStream.reduce(1, (a, b) -> a * b));
+        System.out.print(integerStream.reduce(1, (a, b) -> a * b) + " ");
 
         BinaryOperator<Integer> op = (a, b) -> a * b;
         Stream<Integer> empty = Stream.empty();

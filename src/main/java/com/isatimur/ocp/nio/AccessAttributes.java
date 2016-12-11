@@ -7,12 +7,22 @@ import java.nio.file.Paths;
 import java.nio.file.attribute.FileTime;
 import java.nio.file.attribute.PosixFileAttributeView;
 import java.nio.file.attribute.PosixFileAttributes;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 
 /**
  * Created by tisachenko on 17.04.16.
  */
 public class AccessAttributes {
     public static void main(String[] args) throws IOException {
+
+        // D:\OCPJP\NIO2\src\SubPath.java
+        Path aPath = Paths.get("D:\\OCPJP\\programs\\..programs\\..\\..\\NIO2\\src\\.\\SubPath.java");
+        aPath = aPath.normalize();
+        System.out.println(aPath.subpath(2, 3));
+
+
         Path path = Paths.get("./src/main/java/com/isatimur/ocp/nio/AccessAttributes.java");
         System.out.println("size:" + Files.size(path));
         System.out.println("isDirectory:" + Files.isDirectory(path));
@@ -44,5 +54,13 @@ public class AccessAttributes {
         System.out.println("attribute permissions: " + attr1.permissions());
         System.out.println("attribute group: " + attr2.group());
 
+        List<String> vowels = new ArrayList<String>();
+        vowels.add("a");
+        vowels.add("e");
+        vowels.add("i");
+        vowels.add("o");
+        vowels.add("u");
+        Function<List<String>, List<String>> f = list -> list.subList(2, 4);
+        f.apply(vowels);
     }
 }

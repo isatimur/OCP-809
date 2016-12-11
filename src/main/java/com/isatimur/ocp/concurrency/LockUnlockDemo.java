@@ -13,6 +13,7 @@ interface Task {
 }
 
 public class LockUnlockDemo implements Task {
+
     final ReentrantLock reentrantLock = new ReentrantLock();
 
     public static void main(String[] args) {
@@ -25,7 +26,6 @@ public class LockUnlockDemo implements Task {
         }
 
         service.shutdown();
-
     }
 
     @Override
@@ -44,7 +44,6 @@ public class LockUnlockDemo implements Task {
             reentrantLock.unlock();
         }
     }
-
 }
 
 class Worker implements Runnable {

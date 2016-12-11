@@ -37,7 +37,8 @@ public class WhaleDataCalculatorParallel {
     }
 
     public void processAllData(List<Integer> data) {
-        data.parallelStream().map(a -> processRecord(a)).count();
+//        data.parallelStream().map(a -> processRecord(a)).count();// 40 secs / cores count
+        data.stream().map(a -> processRecord(a)).count();// 40 secs
     }
 }
 

@@ -13,8 +13,10 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Properties;
 
 import static java.time.temporal.ChronoUnit.MINUTES;
+import static java.time.temporal.ChronoUnit.SECONDS;
 
 /**
  * Created by Isa Timur on 7/14/16.
@@ -105,6 +107,7 @@ public class DateTimeAPI {
         System.out.println("========================Instant============================");
 
         Instant currTimeStamp = Instant.now();
+
         System.out.println("Instant timestamp is: " + currTimeStamp);
         System.out.println("Number of seconds elapsed: " + currTimeStamp.getEpochSecond());
         System.out.println("Number of miliseconds elapsed: " + currTimeStamp.toEpochMilli());
@@ -115,6 +118,9 @@ public class DateTimeAPI {
         LocalDate expiryDate = LocalDate.of(2018, Month.JULY, 15);
         Period expiry = Period.between(manufacturingDate, expiryDate);
         System.out.printf("Medicine will expire in: %d year, %d months and %d days (%s) \n", expiry.getYears(), expiry.getMonths(), expiry.getDays(), expiry);
+
+        Duration d = Duration.between(LocalDateTime.of(2015, Month.SEPTEMBER, 2, 1, 0), LocalDateTime.of(2015, Month.SEPTEMBER, 2, 10, 10));
+        System.out.println(d);
 
         System.out.println(Period.ofWeeks(2));
         System.out.println(Period.ofDays(15));
@@ -130,6 +136,7 @@ public class DateTimeAPI {
         Duration between = Duration.between(nowTime, comingMidnight);
         System.out.println(between);
 
+        System.out.println(Duration.of(60, SECONDS));
         System.out.println(Duration.of(3600, MINUTES));
         System.out.println(Duration.ofDays(4));
         System.out.println(Duration.ofHours(2));
@@ -171,6 +178,9 @@ public class DateTimeAPI {
 
         Duration timeDifference = Duration.between(dateTimeInSingapore.toLocalTime(), sameDateTimeInSingapore.toLocalTime());
 
+
+        System.out.println(Duration.ofDays(1).ofHours(2).ofSeconds(34));
+
         System.out.printf(
             "Time difference between %s and %s zones is %d hours %n", singapooreZone, aucklandZone, timeDifference.toHours());
 
@@ -203,10 +213,19 @@ public class DateTimeAPI {
             "K:mm:ss a"
         };
 
+        Properties properties = new Properties();
+
         LocalTime timeNoww = LocalTime.now();
         for (String timeFormats : timeFormatters) {
             System.out.printf("Pattern \"%s\" is %s %n", timeFormats, DateTimeFormatter.ofPattern(timeFormats).format(timeNoww));
         }
+
+        Period period = Period.ofDays(1);
+        // Durationis for hours, minutes, and seconds(nanos and millis).
+        Duration duration = Duration.ofDays(1);
+        timeNoww.plus(duration);
+//        timeNoww.plus(period);
+
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd MMM yyyy hh.mm a");
 

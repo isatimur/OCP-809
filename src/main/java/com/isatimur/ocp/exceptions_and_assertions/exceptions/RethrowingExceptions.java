@@ -11,6 +11,7 @@ public class RethrowingExceptions {
     public static void main(String[] args) throws IOException {
         RethrowingExceptions rethrowingExceptions = new RethrowingExceptions();
         rethrowingExceptions.rethrowig();
+        rethrowingExceptions.multicatch();
     }
 
     public void parseData() throws IOException, DateTimeParseException {
